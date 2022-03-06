@@ -31,173 +31,111 @@ namespace Aplikacja
         {
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.Dodaj_button = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Start = new System.Windows.Forms.TabPage();
+            this.Sekwencje = new System.Windows.Forms.TabPage();
+            this.Funkcje = new System.Windows.Forms.TabPage();
             this.funkcje_bialek_dataset = new Aplikacja.Funkcje_bialek_dataset();
             this.funkcjebialekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.funkcje_bialekTableAdapter = new Aplikacja.Funkcje_bialek_datasetTableAdapters.funkcje_bialekTableAdapter();
+            this.funkcjeDataSet = new Aplikacja.FunkcjeDataSet();
+            this.funkcjebialekBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.funkcje_bialekTableAdapter1 = new Aplikacja.FunkcjeDataSetTableAdapters.funkcje_bialekTableAdapter();
+            this.Szlaki_Biochem = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idfunkcjiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zrodloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.sekwencjeDataSet = new Aplikacja.SekwencjeDataSet();
+            this.sekwencjebialkoweBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sekwencje_bialkoweTableAdapter = new Aplikacja.SekwencjeDataSetTableAdapters.sekwencje_bialkoweTableAdapter();
+            this.idsekwencjiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazwaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ncbiidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uniprotidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sekwencjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.szlakiDataSet = new Aplikacja.SzlakiDataSet();
+            this.szlakibiochemiczneBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.szlaki_biochemiczneTableAdapter = new Aplikacja.SzlakiDataSetTableAdapters.szlaki_biochemiczneTableAdapter();
+            this.idszlakuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazwaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zrodloDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kompleksy = new System.Windows.Forms.TabPage();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.kompleksyDataSet = new Aplikacja.KompleksyDataSet();
+            this.kompleksyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kompleksyTableAdapter = new Aplikacja.KompleksyDataSetTableAdapters.kompleksyTableAdapter();
+            this.idkompleksuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazwaDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zrodloDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Sekwencje.SuspendLayout();
+            this.Funkcje.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.funkcje_bialek_dataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funkcjebialekBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funkcjeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funkcjebialekBindingSource1)).BeginInit();
+            this.Szlaki_Biochem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sekwencjeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sekwencjebialkoweBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.szlakiDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.szlakibiochemiczneBindingSource)).BeginInit();
+            this.Kompleksy.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kompleksyDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kompleksyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.Start);
+            this.tabControl1.Controls.Add(this.Sekwencje);
+            this.tabControl1.Controls.Add(this.Funkcje);
+            this.tabControl1.Controls.Add(this.Szlaki_Biochem);
+            this.tabControl1.Controls.Add(this.Kompleksy);
             this.tabControl1.Location = new System.Drawing.Point(-1, -3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1463, 961);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // Start
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1455, 928);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Start";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.Start.Location = new System.Drawing.Point(4, 29);
+            this.Start.Name = "Start";
+            this.Start.Padding = new System.Windows.Forms.Padding(3);
+            this.Start.Size = new System.Drawing.Size(1455, 928);
+            this.Start.TabIndex = 0;
+            this.Start.Text = "Start";
+            this.Start.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // Sekwencje
             // 
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1455, 928);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Przeglądaj";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.Sekwencje.Controls.Add(this.dataGridView2);
+            this.Sekwencje.Location = new System.Drawing.Point(4, 29);
+            this.Sekwencje.Name = "Sekwencje";
+            this.Sekwencje.Padding = new System.Windows.Forms.Padding(3);
+            this.Sekwencje.Size = new System.Drawing.Size(1455, 928);
+            this.Sekwencje.TabIndex = 1;
+            this.Sekwencje.Text = "Sekwencje";
+            this.Sekwencje.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // Funkcje
             // 
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.label1);
-            this.tabPage3.Controls.Add(this.textBox4);
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Controls.Add(this.textBox2);
-            this.tabPage3.Controls.Add(this.textBox1);
-            this.tabPage3.Controls.Add(this.Dodaj_button);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1455, 928);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Dodaj Rekord";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // Dodaj_button
-            // 
-            this.Dodaj_button.Location = new System.Drawing.Point(21, 390);
-            this.Dodaj_button.Name = "Dodaj_button";
-            this.Dodaj_button.Size = new System.Drawing.Size(146, 50);
-            this.Dodaj_button.TabIndex = 0;
-            this.Dodaj_button.Text = "Dodaj";
-            this.Dodaj_button.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(21, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(319, 26);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(21, 129);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(319, 26);
-            this.textBox2.TabIndex = 2;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(21, 219);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(319, 26);
-            this.textBox3.TabIndex = 3;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(21, 301);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(319, 26);
-            this.textBox4.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 106);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 196);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 278);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "label4";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idfunkcjiDataGridViewTextBoxColumn,
-            this.nazwaDataGridViewTextBoxColumn,
-            this.opisDataGridViewTextBoxColumn,
-            this.zrodloDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.funkcjebialekBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(98, 123);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(661, 443);
-            this.dataGridView1.TabIndex = 0;
+            this.Funkcje.Controls.Add(this.dataGridView1);
+            this.Funkcje.Location = new System.Drawing.Point(4, 29);
+            this.Funkcje.Name = "Funkcje";
+            this.Funkcje.Size = new System.Drawing.Size(1455, 928);
+            this.Funkcje.TabIndex = 2;
+            this.Funkcje.Text = "Funkcje";
+            this.Funkcje.UseVisualStyleBackColor = true;
             // 
             // funkcje_bialek_dataset
             // 
@@ -213,12 +151,54 @@ namespace Aplikacja
             // 
             this.funkcje_bialekTableAdapter.ClearBeforeFill = true;
             // 
+            // funkcjeDataSet
+            // 
+            this.funkcjeDataSet.DataSetName = "FunkcjeDataSet";
+            this.funkcjeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // funkcjebialekBindingSource1
+            // 
+            this.funkcjebialekBindingSource1.DataMember = "funkcje_bialek";
+            this.funkcjebialekBindingSource1.DataSource = this.funkcjeDataSet;
+            // 
+            // funkcje_bialekTableAdapter1
+            // 
+            this.funkcje_bialekTableAdapter1.ClearBeforeFill = true;
+            // 
+            // Szlaki_Biochem
+            // 
+            this.Szlaki_Biochem.Controls.Add(this.dataGridView3);
+            this.Szlaki_Biochem.Location = new System.Drawing.Point(4, 29);
+            this.Szlaki_Biochem.Name = "Szlaki_Biochem";
+            this.Szlaki_Biochem.Size = new System.Drawing.Size(1455, 928);
+            this.Szlaki_Biochem.TabIndex = 3;
+            this.Szlaki_Biochem.Text = "Szlaki Biochemiczne";
+            this.Szlaki_Biochem.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idfunkcjiDataGridViewTextBoxColumn,
+            this.nazwaDataGridViewTextBoxColumn,
+            this.opisDataGridViewTextBoxColumn,
+            this.zrodloDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.funkcjebialekBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(24, 27);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(1256, 701);
+            this.dataGridView1.TabIndex = 1;
+            // 
             // idfunkcjiDataGridViewTextBoxColumn
             // 
             this.idfunkcjiDataGridViewTextBoxColumn.DataPropertyName = "id_funkcji";
             this.idfunkcjiDataGridViewTextBoxColumn.HeaderText = "id_funkcji";
             this.idfunkcjiDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.idfunkcjiDataGridViewTextBoxColumn.Name = "idfunkcjiDataGridViewTextBoxColumn";
+            this.idfunkcjiDataGridViewTextBoxColumn.ReadOnly = true;
             this.idfunkcjiDataGridViewTextBoxColumn.Width = 150;
             // 
             // nazwaDataGridViewTextBoxColumn
@@ -245,6 +225,217 @@ namespace Aplikacja
             this.zrodloDataGridViewTextBoxColumn.Name = "zrodloDataGridViewTextBoxColumn";
             this.zrodloDataGridViewTextBoxColumn.Width = 150;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idsekwencjiDataGridViewTextBoxColumn,
+            this.nazwaDataGridViewTextBoxColumn1,
+            this.ncbiidDataGridViewTextBoxColumn,
+            this.uniprotidDataGridViewTextBoxColumn,
+            this.sekwencjaDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.sekwencjebialkoweBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(25, 25);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 62;
+            this.dataGridView2.RowTemplate.Height = 28;
+            this.dataGridView2.Size = new System.Drawing.Size(1213, 721);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // sekwencjeDataSet
+            // 
+            this.sekwencjeDataSet.DataSetName = "SekwencjeDataSet";
+            this.sekwencjeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sekwencjebialkoweBindingSource
+            // 
+            this.sekwencjebialkoweBindingSource.DataMember = "sekwencje_bialkowe";
+            this.sekwencjebialkoweBindingSource.DataSource = this.sekwencjeDataSet;
+            // 
+            // sekwencje_bialkoweTableAdapter
+            // 
+            this.sekwencje_bialkoweTableAdapter.ClearBeforeFill = true;
+            // 
+            // idsekwencjiDataGridViewTextBoxColumn
+            // 
+            this.idsekwencjiDataGridViewTextBoxColumn.DataPropertyName = "id_sekwencji";
+            this.idsekwencjiDataGridViewTextBoxColumn.HeaderText = "id_sekwencji";
+            this.idsekwencjiDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idsekwencjiDataGridViewTextBoxColumn.Name = "idsekwencjiDataGridViewTextBoxColumn";
+            this.idsekwencjiDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idsekwencjiDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // nazwaDataGridViewTextBoxColumn1
+            // 
+            this.nazwaDataGridViewTextBoxColumn1.DataPropertyName = "nazwa";
+            this.nazwaDataGridViewTextBoxColumn1.HeaderText = "nazwa";
+            this.nazwaDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.nazwaDataGridViewTextBoxColumn1.Name = "nazwaDataGridViewTextBoxColumn1";
+            this.nazwaDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // ncbiidDataGridViewTextBoxColumn
+            // 
+            this.ncbiidDataGridViewTextBoxColumn.DataPropertyName = "ncbi_id";
+            this.ncbiidDataGridViewTextBoxColumn.HeaderText = "ncbi_id";
+            this.ncbiidDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.ncbiidDataGridViewTextBoxColumn.Name = "ncbiidDataGridViewTextBoxColumn";
+            this.ncbiidDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // uniprotidDataGridViewTextBoxColumn
+            // 
+            this.uniprotidDataGridViewTextBoxColumn.DataPropertyName = "uniprot_id";
+            this.uniprotidDataGridViewTextBoxColumn.HeaderText = "uniprot_id";
+            this.uniprotidDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.uniprotidDataGridViewTextBoxColumn.Name = "uniprotidDataGridViewTextBoxColumn";
+            this.uniprotidDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // sekwencjaDataGridViewTextBoxColumn
+            // 
+            this.sekwencjaDataGridViewTextBoxColumn.DataPropertyName = "sekwencja";
+            this.sekwencjaDataGridViewTextBoxColumn.HeaderText = "sekwencja";
+            this.sekwencjaDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.sekwencjaDataGridViewTextBoxColumn.Name = "sekwencjaDataGridViewTextBoxColumn";
+            this.sekwencjaDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idszlakuDataGridViewTextBoxColumn,
+            this.nazwaDataGridViewTextBoxColumn2,
+            this.opisDataGridViewTextBoxColumn1,
+            this.zrodloDataGridViewTextBoxColumn1});
+            this.dataGridView3.DataSource = this.szlakibiochemiczneBindingSource;
+            this.dataGridView3.Location = new System.Drawing.Point(23, 30);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 62;
+            this.dataGridView3.RowTemplate.Height = 28;
+            this.dataGridView3.Size = new System.Drawing.Size(1173, 721);
+            this.dataGridView3.TabIndex = 0;
+            // 
+            // szlakiDataSet
+            // 
+            this.szlakiDataSet.DataSetName = "SzlakiDataSet";
+            this.szlakiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // szlakibiochemiczneBindingSource
+            // 
+            this.szlakibiochemiczneBindingSource.DataMember = "szlaki_biochemiczne";
+            this.szlakibiochemiczneBindingSource.DataSource = this.szlakiDataSet;
+            // 
+            // szlaki_biochemiczneTableAdapter
+            // 
+            this.szlaki_biochemiczneTableAdapter.ClearBeforeFill = true;
+            // 
+            // idszlakuDataGridViewTextBoxColumn
+            // 
+            this.idszlakuDataGridViewTextBoxColumn.DataPropertyName = "id_szlaku";
+            this.idszlakuDataGridViewTextBoxColumn.HeaderText = "id_szlaku";
+            this.idszlakuDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idszlakuDataGridViewTextBoxColumn.Name = "idszlakuDataGridViewTextBoxColumn";
+            this.idszlakuDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idszlakuDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // nazwaDataGridViewTextBoxColumn2
+            // 
+            this.nazwaDataGridViewTextBoxColumn2.DataPropertyName = "nazwa";
+            this.nazwaDataGridViewTextBoxColumn2.HeaderText = "nazwa";
+            this.nazwaDataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.nazwaDataGridViewTextBoxColumn2.Name = "nazwaDataGridViewTextBoxColumn2";
+            this.nazwaDataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // opisDataGridViewTextBoxColumn1
+            // 
+            this.opisDataGridViewTextBoxColumn1.DataPropertyName = "opis";
+            this.opisDataGridViewTextBoxColumn1.HeaderText = "opis";
+            this.opisDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.opisDataGridViewTextBoxColumn1.Name = "opisDataGridViewTextBoxColumn1";
+            this.opisDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // zrodloDataGridViewTextBoxColumn1
+            // 
+            this.zrodloDataGridViewTextBoxColumn1.DataPropertyName = "zrodlo";
+            this.zrodloDataGridViewTextBoxColumn1.HeaderText = "zrodlo";
+            this.zrodloDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.zrodloDataGridViewTextBoxColumn1.Name = "zrodloDataGridViewTextBoxColumn1";
+            this.zrodloDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // Kompleksy
+            // 
+            this.Kompleksy.Controls.Add(this.dataGridView4);
+            this.Kompleksy.Location = new System.Drawing.Point(4, 29);
+            this.Kompleksy.Name = "Kompleksy";
+            this.Kompleksy.Size = new System.Drawing.Size(1455, 928);
+            this.Kompleksy.TabIndex = 4;
+            this.Kompleksy.Text = "Kompleksy";
+            this.Kompleksy.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AutoGenerateColumns = false;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idkompleksuDataGridViewTextBoxColumn,
+            this.nazwaDataGridViewTextBoxColumn3,
+            this.opisDataGridViewTextBoxColumn2,
+            this.zrodloDataGridViewTextBoxColumn2});
+            this.dataGridView4.DataSource = this.kompleksyBindingSource;
+            this.dataGridView4.Location = new System.Drawing.Point(26, 31);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowHeadersWidth = 62;
+            this.dataGridView4.RowTemplate.Height = 28;
+            this.dataGridView4.Size = new System.Drawing.Size(1177, 684);
+            this.dataGridView4.TabIndex = 0;
+            // 
+            // kompleksyDataSet
+            // 
+            this.kompleksyDataSet.DataSetName = "KompleksyDataSet";
+            this.kompleksyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kompleksyBindingSource
+            // 
+            this.kompleksyBindingSource.DataMember = "kompleksy";
+            this.kompleksyBindingSource.DataSource = this.kompleksyDataSet;
+            // 
+            // kompleksyTableAdapter
+            // 
+            this.kompleksyTableAdapter.ClearBeforeFill = true;
+            // 
+            // idkompleksuDataGridViewTextBoxColumn
+            // 
+            this.idkompleksuDataGridViewTextBoxColumn.DataPropertyName = "id_kompleksu";
+            this.idkompleksuDataGridViewTextBoxColumn.HeaderText = "id_kompleksu";
+            this.idkompleksuDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idkompleksuDataGridViewTextBoxColumn.Name = "idkompleksuDataGridViewTextBoxColumn";
+            this.idkompleksuDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idkompleksuDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // nazwaDataGridViewTextBoxColumn3
+            // 
+            this.nazwaDataGridViewTextBoxColumn3.DataPropertyName = "nazwa";
+            this.nazwaDataGridViewTextBoxColumn3.HeaderText = "nazwa";
+            this.nazwaDataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.nazwaDataGridViewTextBoxColumn3.Name = "nazwaDataGridViewTextBoxColumn3";
+            this.nazwaDataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // opisDataGridViewTextBoxColumn2
+            // 
+            this.opisDataGridViewTextBoxColumn2.DataPropertyName = "opis";
+            this.opisDataGridViewTextBoxColumn2.HeaderText = "opis";
+            this.opisDataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.opisDataGridViewTextBoxColumn2.Name = "opisDataGridViewTextBoxColumn2";
+            this.opisDataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // zrodloDataGridViewTextBoxColumn2
+            // 
+            this.zrodloDataGridViewTextBoxColumn2.DataPropertyName = "zrodlo";
+            this.zrodloDataGridViewTextBoxColumn2.HeaderText = "zrodlo";
+            this.zrodloDataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.zrodloDataGridViewTextBoxColumn2.Name = "zrodloDataGridViewTextBoxColumn2";
+            this.zrodloDataGridViewTextBoxColumn2.Width = 150;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -255,12 +446,24 @@ namespace Aplikacja
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Sekwencje.ResumeLayout(false);
+            this.Funkcje.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.funkcje_bialek_dataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funkcjebialekBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funkcjeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funkcjebialekBindingSource1)).EndInit();
+            this.Szlaki_Biochem.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sekwencjeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sekwencjebialkoweBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.szlakiDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.szlakibiochemiczneBindingSource)).EndInit();
+            this.Kompleksy.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kompleksyDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kompleksyBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -268,26 +471,47 @@ namespace Aplikacja
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button Dodaj_button;
+        private System.Windows.Forms.TabPage Start;
+        private System.Windows.Forms.TabPage Sekwencje;
+        private System.Windows.Forms.TabPage Funkcje;
         private Funkcje_bialek_dataset funkcje_bialek_dataset;
         private System.Windows.Forms.BindingSource funkcjebialekBindingSource;
         private Funkcje_bialek_datasetTableAdapters.funkcje_bialekTableAdapter funkcje_bialekTableAdapter;
+        private FunkcjeDataSet funkcjeDataSet;
+        private System.Windows.Forms.BindingSource funkcjebialekBindingSource1;
+        private FunkcjeDataSetTableAdapters.funkcje_bialekTableAdapter funkcje_bialekTableAdapter1;
+        private System.Windows.Forms.TabPage Szlaki_Biochem;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idfunkcjiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazwaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn zrodloDataGridViewTextBoxColumn;
+        private SekwencjeDataSet sekwencjeDataSet;
+        private System.Windows.Forms.BindingSource sekwencjebialkoweBindingSource;
+        private SekwencjeDataSetTableAdapters.sekwencje_bialkoweTableAdapter sekwencje_bialkoweTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idsekwencjiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazwaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ncbiidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uniprotidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sekwencjaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private SzlakiDataSet szlakiDataSet;
+        private System.Windows.Forms.BindingSource szlakibiochemiczneBindingSource;
+        private SzlakiDataSetTableAdapters.szlaki_biochemiczneTableAdapter szlaki_biochemiczneTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idszlakuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazwaDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zrodloDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.TabPage Kompleksy;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private KompleksyDataSet kompleksyDataSet;
+        private System.Windows.Forms.BindingSource kompleksyBindingSource;
+        private KompleksyDataSetTableAdapters.kompleksyTableAdapter kompleksyTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idkompleksuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazwaDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zrodloDataGridViewTextBoxColumn2;
     }
 }
 

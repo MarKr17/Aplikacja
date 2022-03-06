@@ -67,13 +67,33 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FunkcjeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FunkcjeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Funkcje_bialek_dataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Funkcje_bialek_dataset.xsd</DependentUpon>
     </Compile>
+    <Compile Include="KompleksyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KompleksyDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SekwencjeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SekwencjeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SzlakiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SzlakiDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +106,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="FunkcjeDataSet.xsc">
+      <DependentUpon>FunkcjeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FunkcjeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FunkcjeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunkcjeDataSet.xss">
+      <DependentUpon>FunkcjeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Funkcje_bialek_dataset.xsc">
       <DependentUpon>Funkcje_bialek_dataset.xsd</DependentUpon>
     </None>
@@ -97,6 +128,17 @@
     <None Include="Funkcje_bialek_dataset.xss">
       <DependentUpon>Funkcje_bialek_dataset.xsd</DependentUpon>
     </None>
+    <None Include="KompleksyDataSet.xsc">
+      <DependentUpon>KompleksyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KompleksyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KompleksyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KompleksyDataSet.xss">
+      <DependentUpon>KompleksyDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,6 +148,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SekwencjeDataSet.xsc">
+      <DependentUpon>SekwencjeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SekwencjeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SekwencjeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SekwencjeDataSet.xss">
+      <DependentUpon>SekwencjeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SzlakiDataSet.xsc">
+      <DependentUpon>SzlakiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SzlakiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SzlakiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SzlakiDataSet.xss">
+      <DependentUpon>SzlakiDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
