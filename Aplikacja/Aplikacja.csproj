@@ -67,6 +67,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Funkcje_bialek_dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Funkcje_bialek_dataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -81,6 +86,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Funkcje_bialek_dataset.xsc">
+      <DependentUpon>Funkcje_bialek_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Funkcje_bialek_dataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Funkcje_bialek_dataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Funkcje_bialek_dataset.xss">
+      <DependentUpon>Funkcje_bialek_dataset.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
