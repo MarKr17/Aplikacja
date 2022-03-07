@@ -31,5 +31,54 @@ namespace Aplikacja
             
 
         }
+
+        private void dataGridView_sekwencje_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dataGridView_sekwencje.SelectedRows.Count!=0)
+            {
+                textBox_id_sekw.Text = dataGridView_sekwencje.SelectedRows[0].Cells[0].Value.ToString();
+                textBox_nazwa_sekw.Text = dataGridView_sekwencje.SelectedRows[0].Cells[1].Value.ToString();
+                textBox_ncbi_id.Text = dataGridView_sekwencje.SelectedRows[0].Cells[2].Value.ToString();
+                textBox_uniprot_id.Text = dataGridView_sekwencje.SelectedRows[0].Cells[3].Value.ToString();
+                textBox_sekwencja.Text = dataGridView_sekwencje.SelectedRows[0].Cells[4].Value.ToString();
+
+
+            }
+            
+        }
+
+        private void dataGridView_funkcje_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dataGridView_funkcje.SelectedRows.Count!=0)
+            {
+                textBox_id_funk.Text = dataGridView_funkcje.SelectedRows[0].Cells[0].Value.ToString();
+                textBox_nazwa_funk.Text = dataGridView_funkcje.SelectedRows[0].Cells[1].Value.ToString();
+                textBox_opis_funk.Text = dataGridView_funkcje.SelectedRows[0].Cells[2].Value.ToString();
+                textBox_zrodlo_funk.Text = dataGridView_funkcje.SelectedRows[0].Cells[3].Value.ToString();
+
+            }
+        }
+
+        private void dataGridView_szlaki_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dataGridView_szlaki.SelectedRows.Count!=0)
+            {
+                textBox_id_szlaku.Text = dataGridView_szlaki.SelectedRows[0].Cells[0].Value.ToString();
+                textBox_nazwa_szlaku.Text = dataGridView_szlaki.SelectedRows[0].Cells[1].Value.ToString();
+                textBox_opis_szlaku.Text = dataGridView_szlaki.SelectedRows[0].Cells[2].Value.ToString();
+                textBox_zrodlo_szlaku.Text = dataGridView_szlaki.SelectedRows[0].Cells[3].Value.ToString();
+            }
+        }
+
+        private void dataGridView_kompleksy_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dataGridView_kompleksy.SelectedRows.Count!=0)
+            {
+                textBox_id_kom.Text = dataGridView_kompleksy.SelectedRows[0].Cells[0].Value.ToString();
+                textBox_nazwa_kom.Text = dataGridView_kompleksy.SelectedRows[0].Cells[1].Value.ToString();
+                textBox_opis_kom.Text = dataGridView_kompleksy.SelectedRows[0].Cells[2].Value.ToString();
+                textBox_zrodlo_kom.Text = dataGridView_kompleksy.SelectedRows[0].Cells[3].Value.ToString();
+            }
+        }
     }
 }
