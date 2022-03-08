@@ -61,6 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,10 +94,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="relation1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>relation1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="relation4DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>relation4DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SekwencjeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SekwencjeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sekwencje_kompleksyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sekwencje_kompleksyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sekwencje_szlakiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sekwencje_szlakiDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="SzlakiDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -111,6 +136,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Database1DataSet.xsc">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet.xss">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
     <None Include="FunkcjeDataSet.xsc">
       <DependentUpon>FunkcjeDataSet.xsd</DependentUpon>
     </None>
@@ -164,6 +200,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="relation1DataSet.xsc">
+      <DependentUpon>relation1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="relation1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>relation1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="relation1DataSet.xss">
+      <DependentUpon>relation1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="relation4DataSet.xsc">
+      <DependentUpon>relation4DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="relation4DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>relation4DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="relation4DataSet.xss">
+      <DependentUpon>relation4DataSet.xsd</DependentUpon>
+    </None>
     <None Include="SekwencjeDataSet.xsc">
       <DependentUpon>SekwencjeDataSet.xsd</DependentUpon>
     </None>
@@ -174,6 +232,28 @@
     </None>
     <None Include="SekwencjeDataSet.xss">
       <DependentUpon>SekwencjeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sekwencje_kompleksyDataSet.xsc">
+      <DependentUpon>sekwencje_kompleksyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sekwencje_kompleksyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sekwencje_kompleksyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sekwencje_kompleksyDataSet.xss">
+      <DependentUpon>sekwencje_kompleksyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sekwencje_szlakiDataSet1.xsc">
+      <DependentUpon>sekwencje_szlakiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="sekwencje_szlakiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sekwencje_szlakiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sekwencje_szlakiDataSet1.xss">
+      <DependentUpon>sekwencje_szlakiDataSet1.xsd</DependentUpon>
     </None>
     <None Include="SzlakiDataSet.xsc">
       <DependentUpon>SzlakiDataSet.xsd</DependentUpon>

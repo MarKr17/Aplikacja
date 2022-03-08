@@ -19,6 +19,16 @@ namespace Aplikacja
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'database1DataSet.relation_3' . Możesz go przenieść lub usunąć.
+            this.relation_3TableAdapter.Fill(this.database1DataSet.relation_3);
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'relation1DataSet.relation_1' . Możesz go przenieść lub usunąć.
+            this.relation_1TableAdapter.Fill(this.relation1DataSet.relation_1);
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'relation4DataSet.relation_4' . Możesz go przenieść lub usunąć.
+            this.relation_4TableAdapter.Fill(this.relation4DataSet.relation_4);
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'sekwencje_kompleksyDataSet.sekwencje_kompleksy' . Możesz go przenieść lub usunąć.
+            this.sekwencje_kompleksyTableAdapter.Fill(this.sekwencje_kompleksyDataSet.sekwencje_kompleksy);
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'sekwencje_szlakiDataSet.sekwencje_szlaki' . Możesz go przenieść lub usunąć.
+            this.sekwencje_szlakiTableAdapter.Fill(this.sekwencje_szlakiDataSet.sekwencje_szlaki);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'funkcje_sekwDataSet.funkcje_sekw' . Możesz go przenieść lub usunąć.
             this.funkcje_sekwTableAdapter.Fill(this.funkcje_sekwDataSet.funkcje_sekw);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'kompleksyDataSet.kompleksy' . Możesz go przenieść lub usunąć.
@@ -45,6 +55,8 @@ namespace Aplikacja
                 textBox_sekwencja.Text = dataGridView_sekwencje.SelectedRows[0].Cells[4].Value.ToString();
 
                 ShowOnlyRelevant(dataGridView1, dataGridView_sekwencje.SelectedRows[0].Cells[0].Value, "sekwencje_bialkowe_id_sekwencji", funkcjesekwBindingSource );
+                ShowOnlyRelevant(dataGridView2, dataGridView_sekwencje.SelectedRows[0].Cells[0].Value, "sekwencje_bialkowe_id_sekwencji", sekwencjeszlakiBindingSource);
+                ShowOnlyRelevant(dataGridView3, dataGridView_sekwencje.SelectedRows[0].Cells[0].Value, "sekwencje_bialkowe_id_sekwencji", sekwencjekompleksyBindingSource);
 
             }
             
