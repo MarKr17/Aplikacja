@@ -105,5 +105,116 @@ namespace Aplikacja
             
             
         }
+
+        private void dataGridView5_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dataGridView5.SelectedRows.Count!=0)
+            {
+                textBox6.Text = dataGridView5.SelectedRows[0].Cells[0].Value.ToString();
+                textBox5.Text = dataGridView5.SelectedRows[0].Cells[1].Value.ToString();
+            }
+        }
+
+        private void dataGridView4_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dataGridView4.SelectedRows.Count!=0)
+            {
+                textBox3.Text = dataGridView4.SelectedRows[0].Cells[0].Value.ToString();
+                textBox4.Text = dataGridView4.SelectedRows[0].Cells[1].Value.ToString();
+            }
+        }
+
+        private void relation4GridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if(relation4GridView.SelectedRows.Count != 0)
+            {
+                textBox1.Text = relation4GridView.SelectedRows[0].Cells[0].Value.ToString();
+                textBox2.Text = relation4GridView.SelectedRows[0].Cells[1].Value.ToString();
+            }
+        }
+        private void database_addRow(string table_name, Dictionary<string,string> dict)
+        {
+
+            string columns = String.Join(",", dict.Keys.Select(o => o.ToString()).ToArray());
+            string values = String.Join(",", dict.Values.Select(o => o.ToString()).ToArray());
+
+            System.Data.SqlClient.SqlConnection sqlConnection1 =
+                        new System.Data.SqlClient.SqlConnection("Data Source=(LocalDB)\\" +
+                        "MSSQLLocalDB;AttachDbFilename=C:\\Users\\Marysia\\source\\repos\\Aplikacja\\Aplikacja\\Database1.mdf;Integrated Security=True");
+
+            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"INSERT INTO {table_name}({columns}) VALUES ({values})";
+            cmd.Connection = sqlConnection1;
+
+            sqlConnection1.Open();
+            cmd.ExecuteNonQuery();
+            sqlConnection1.Close();
+        }
+
+        private void zapisz_sekwencje_button_Click(object sender, EventArgs e)
+        {
+            //string id_sekw = textBox_id_sekw.Text;
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            if(textBox_nazwa_sekw.Text!=null) { dict.Add(key: "nazwa", value: "\'" + textBox_nazwa_sekw.Text + "\'"); };
+            if (textBox_ncbi_id.Text != null) { dict.Add(key: "ncbi_id", value: "\'" + textBox_ncbi_id.Text + "\'"); };
+            if (textBox_uniprot_id.Text != null) { dict.Add(key: "uniprot_id", value: "\'" + textBox_uniprot_id.Text + "\'"); };
+            if (textBox_sekwencja.Text != null) { dict.Add(key: "sekwencja", value: "\'" + textBox_sekwencja.Text + "\'"); };
+
+            database_addRow("sekwencje_bialkowe", dict);
+            
+
+            dataGridView_sekwencje.DataSource = sekwencjebialkoweBindingSource;
+            dataGridView_sekwencje.Refresh();
+        }
+
+        private void funkcje_zapiszButton_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            //if (textBox_id_funk.Text != null) { dict.Add(key: "id_funkcji", value: "\'" + textBox_id_funk.Text + "\'"); };
+            if (textBox_nazwa_funk.Text != null) { dict.Add(key: "nazwa", value: "\'" + textBox_nazwa_funk.Text + "\'"); };
+            if (textBox_zrodlo_funk.Text != null) { dict.Add(key: "zrodlo", value: "\'" + textBox_zrodlo_funk.Text + "\'"); };
+            if (textBox_opis_funk.Text != null) { dict.Add(key: "opis", value: "\'" + textBox_opis_funk.Text + "\'"); };
+
+            database_addRow("funkcje_bialek", dict);
+
+
+            dataGridView_funkcje.DataSource = funkcjebialekBindingSource;
+            dataGridView_funkcje.Refresh();
+        }
+
+        private void szlaki_zapiszButton_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            //if (textBox_id_funk.Text != null) { dict.Add(key: "id_funkcji", value: "\'" + textBox_id_funk.Text + "\'"); };
+            if (textBox_nazwa_szlaku.Text != null) { dict.Add(key: "nazwa", value: "\'" + textBox_nazwa_szlaku.Text + "\'"); };
+            if (textBox_zrodlo_szlaku.Text != null) { dict.Add(key: "zrodlo", value: "\'" + textBox_zrodlo_szlaku.Text + "\'"); };
+            if (textBox_opis_szlaku.Text != null) { dict.Add(key: "opis", value: "\'" + textBox_opis_szlaku.Text + "\'"); };
+
+            database_addRow("szlaki_biochemiczne", dict);
+
+
+            dataGridView_szlaki.DataSource = szlakibiochemiczneBindingSource;
+            dataGridView_szlaki.Refresh();
+        }
+
+        private void kompleksy_zapiszButton_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            //if (textBox_id_funk.Text != null) { dict.Add(key: "id_funkcji", value: "\'" + textBox_id_funk.Text + "\'"); };
+            if (textBox_nazwa_kom.Text != null) { dict.Add(key: "nazwa", value: "\'" + textBox_nazwa_kom.Text + "\'"); };
+            if (textBox_zrodlo_kom.Text != null) { dict.Add(key: "zrodlo", value: "\'" + textBox_zrodlo_kom.Text + "\'"); };
+            if (textBox_opis_kom.Text != null) { dict.Add(key: "opis", value: "\'" + textBox_opis_kom.Text + "\'"); };
+
+            database_addRow("kompleksy", dict);
+
+
+            dataGridView_kompleksy.DataSource = kompleksyBindingSource;
+            dataGridView_kompleksy.Refresh();
+        }
     }
 }

@@ -78,7 +78,7 @@ namespace Aplikacja
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.funkcje_zapiszButton = new System.Windows.Forms.Button();
             this.textBox_zrodlo_funk = new System.Windows.Forms.TextBox();
             this.textBox_opis_funk = new System.Windows.Forms.TextBox();
             this.textBox_nazwa_funk = new System.Windows.Forms.TextBox();
@@ -95,7 +95,7 @@ namespace Aplikacja
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.szlaki_zapiszButton = new System.Windows.Forms.Button();
             this.textBox_zrodlo_szlaku = new System.Windows.Forms.TextBox();
             this.textBox_opis_szlaku = new System.Windows.Forms.TextBox();
             this.textBox_nazwa_szlaku = new System.Windows.Forms.TextBox();
@@ -112,7 +112,7 @@ namespace Aplikacja
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.kompleksy_zapiszButton = new System.Windows.Forms.Button();
             this.textBox_zrodlo_kom = new System.Windows.Forms.TextBox();
             this.textBox_opis_kom = new System.Windows.Forms.TextBox();
             this.textBox_nazwa_kom = new System.Windows.Forms.TextBox();
@@ -499,6 +499,7 @@ namespace Aplikacja
             this.zapisz_sekwencje_button.TabIndex = 6;
             this.zapisz_sekwencje_button.Text = "Zapisz";
             this.zapisz_sekwencje_button.UseVisualStyleBackColor = true;
+            this.zapisz_sekwencje_button.Click += new System.EventHandler(this.zapisz_sekwencje_button_Click);
             // 
             // textBox_sekwencja
             // 
@@ -620,7 +621,7 @@ namespace Aplikacja
             this.Funkcje.Controls.Add(this.label8);
             this.Funkcje.Controls.Add(this.label9);
             this.Funkcje.Controls.Add(this.label10);
-            this.Funkcje.Controls.Add(this.button1);
+            this.Funkcje.Controls.Add(this.funkcje_zapiszButton);
             this.Funkcje.Controls.Add(this.textBox_zrodlo_funk);
             this.Funkcje.Controls.Add(this.textBox_opis_funk);
             this.Funkcje.Controls.Add(this.textBox_nazwa_funk);
@@ -669,14 +670,15 @@ namespace Aplikacja
             this.label10.TabIndex = 18;
             this.label10.Text = "id_funkcji";
             // 
-            // button1
+            // funkcje_zapiszButton
             // 
-            this.button1.Location = new System.Drawing.Point(19, 865);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 43);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Zapisz";
-            this.button1.UseVisualStyleBackColor = true;
+            this.funkcje_zapiszButton.Location = new System.Drawing.Point(19, 865);
+            this.funkcje_zapiszButton.Name = "funkcje_zapiszButton";
+            this.funkcje_zapiszButton.Size = new System.Drawing.Size(98, 43);
+            this.funkcje_zapiszButton.TabIndex = 17;
+            this.funkcje_zapiszButton.Text = "Zapisz";
+            this.funkcje_zapiszButton.UseVisualStyleBackColor = true;
+            this.funkcje_zapiszButton.Click += new System.EventHandler(this.funkcje_zapiszButton_Click);
             // 
             // textBox_zrodlo_funk
             // 
@@ -782,7 +784,7 @@ namespace Aplikacja
             this.Szlaki_Biochem.Controls.Add(this.label13);
             this.Szlaki_Biochem.Controls.Add(this.label14);
             this.Szlaki_Biochem.Controls.Add(this.label15);
-            this.Szlaki_Biochem.Controls.Add(this.button2);
+            this.Szlaki_Biochem.Controls.Add(this.szlaki_zapiszButton);
             this.Szlaki_Biochem.Controls.Add(this.textBox_zrodlo_szlaku);
             this.Szlaki_Biochem.Controls.Add(this.textBox_opis_szlaku);
             this.Szlaki_Biochem.Controls.Add(this.textBox_nazwa_szlaku);
@@ -831,14 +833,15 @@ namespace Aplikacja
             this.label15.TabIndex = 18;
             this.label15.Text = "id_szlaku";
             // 
-            // button2
+            // szlaki_zapiszButton
             // 
-            this.button2.Location = new System.Drawing.Point(19, 804);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 43);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Zapisz";
-            this.button2.UseVisualStyleBackColor = true;
+            this.szlaki_zapiszButton.Location = new System.Drawing.Point(19, 804);
+            this.szlaki_zapiszButton.Name = "szlaki_zapiszButton";
+            this.szlaki_zapiszButton.Size = new System.Drawing.Size(98, 43);
+            this.szlaki_zapiszButton.TabIndex = 17;
+            this.szlaki_zapiszButton.Text = "Zapisz";
+            this.szlaki_zapiszButton.UseVisualStyleBackColor = true;
+            this.szlaki_zapiszButton.Click += new System.EventHandler(this.szlaki_zapiszButton_Click);
             // 
             // textBox_zrodlo_szlaku
             // 
@@ -944,7 +947,7 @@ namespace Aplikacja
             this.Kompleksy.Controls.Add(this.label18);
             this.Kompleksy.Controls.Add(this.label19);
             this.Kompleksy.Controls.Add(this.label20);
-            this.Kompleksy.Controls.Add(this.button3);
+            this.Kompleksy.Controls.Add(this.kompleksy_zapiszButton);
             this.Kompleksy.Controls.Add(this.textBox_zrodlo_kom);
             this.Kompleksy.Controls.Add(this.textBox_opis_kom);
             this.Kompleksy.Controls.Add(this.textBox_nazwa_kom);
@@ -993,14 +996,15 @@ namespace Aplikacja
             this.label20.TabIndex = 18;
             this.label20.Text = "id_kompleksu";
             // 
-            // button3
+            // kompleksy_zapiszButton
             // 
-            this.button3.Location = new System.Drawing.Point(24, 841);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 43);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Zapisz";
-            this.button3.UseVisualStyleBackColor = true;
+            this.kompleksy_zapiszButton.Location = new System.Drawing.Point(24, 841);
+            this.kompleksy_zapiszButton.Name = "kompleksy_zapiszButton";
+            this.kompleksy_zapiszButton.Size = new System.Drawing.Size(98, 43);
+            this.kompleksy_zapiszButton.TabIndex = 17;
+            this.kompleksy_zapiszButton.Text = "Zapisz";
+            this.kompleksy_zapiszButton.UseVisualStyleBackColor = true;
+            this.kompleksy_zapiszButton.Click += new System.EventHandler(this.kompleksy_zapiszButton_Click);
             // 
             // textBox_zrodlo_kom
             // 
@@ -1199,6 +1203,7 @@ namespace Aplikacja
             this.relation4GridView.RowTemplate.Height = 28;
             this.relation4GridView.Size = new System.Drawing.Size(363, 454);
             this.relation4GridView.TabIndex = 23;
+            this.relation4GridView.SelectionChanged += new System.EventHandler(this.relation4GridView_SelectionChanged);
             // 
             // relation4DataSet
             // 
@@ -1294,6 +1299,7 @@ namespace Aplikacja
             this.dataGridView4.RowTemplate.Height = 28;
             this.dataGridView4.Size = new System.Drawing.Size(441, 398);
             this.dataGridView4.TabIndex = 22;
+            this.dataGridView4.SelectionChanged += new System.EventHandler(this.dataGridView4_SelectionChanged);
             // 
             // relation1DataSet
             // 
@@ -1389,9 +1395,9 @@ namespace Aplikacja
             this.label30.AutoSize = true;
             this.label30.Location = new System.Drawing.Point(1090, 566);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(225, 30);
+            this.label30.Size = new System.Drawing.Size(152, 30);
             this.label30.TabIndex = 36;
-            this.label30.Text = "id szlaku kompleksu";
+            this.label30.Text = "id kompleksu";
             // 
             // label31
             // 
@@ -1448,6 +1454,7 @@ namespace Aplikacja
             this.dataGridView5.RowTemplate.Height = 28;
             this.dataGridView5.Size = new System.Drawing.Size(441, 398);
             this.dataGridView5.TabIndex = 30;
+            this.dataGridView5.SelectionChanged += new System.EventHandler(this.dataGridView5_SelectionChanged);
             // 
             // database1DataSet
             // 
@@ -1601,7 +1608,7 @@ namespace Aplikacja
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button funkcje_zapiszButton;
         private System.Windows.Forms.TextBox textBox_zrodlo_funk;
         private System.Windows.Forms.TextBox textBox_opis_funk;
         private System.Windows.Forms.TextBox textBox_nazwa_funk;
@@ -1610,7 +1617,7 @@ namespace Aplikacja
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button szlaki_zapiszButton;
         private System.Windows.Forms.TextBox textBox_zrodlo_szlaku;
         private System.Windows.Forms.TextBox textBox_opis_szlaku;
         private System.Windows.Forms.TextBox textBox_nazwa_szlaku;
@@ -1619,7 +1626,7 @@ namespace Aplikacja
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button kompleksy_zapiszButton;
         private System.Windows.Forms.TextBox textBox_zrodlo_kom;
         private System.Windows.Forms.TextBox textBox_opis_kom;
         private System.Windows.Forms.TextBox textBox_nazwa_kom;
