@@ -151,6 +151,23 @@ namespace Aplikacja
             cmd.ExecuteNonQuery();
             sqlConnection1.Close();
         }
+        private void database_editRow(string table_name, string id_name, string id, Dictionary<string, string> dict)
+        {
+            string res = string.Join(", ", dict.Select(p => p.Key + " = " + p.Value ));
+
+            System.Data.SqlClient.SqlConnection sqlConnection1 =
+                        new System.Data.SqlClient.SqlConnection("Data Source=(LocalDB)\\" +
+                        "MSSQLLocalDB;AttachDbFilename=C:\\Users\\Marysia\\source\\repos\\Aplikacja\\Aplikacja\\Database1.mdf;Integrated Security=True");
+
+            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"UPDATE {table_name} SET {res} WHERE {id_name} = {id};";
+            cmd.Connection = sqlConnection1;
+
+            sqlConnection1.Open();
+            cmd.ExecuteNonQuery();
+            sqlConnection1.Close();
+        }
 
         private void zapisz_sekwencje_button_Click(object sender, EventArgs e)
         {
@@ -211,6 +228,71 @@ namespace Aplikacja
             if (textBox_opis_kom.Text != null) { dict.Add(key: "opis", value: "\'" + textBox_opis_kom.Text + "\'"); };
 
             database_addRow("kompleksy", dict);
+
+
+            dataGridView_kompleksy.DataSource = kompleksyBindingSource;
+            dataGridView_kompleksy.Refresh();
+        }
+
+        private void sekwencje_edytujButton_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            if (textBox_nazwa_sekw.Text != null) { dict.Add(key: "nazwa", value: "\'" + textBox_nazwa_sekw.Text + "\'"); };
+            if (textBox_ncbi_id.Text != null) { dict.Add(key: "ncbi_id", value: "\'" + textBox_ncbi_id.Text + "\'"); };
+            if (textBox_uniprot_id.Text != null) { dict.Add(key: "uniprot_id", value: "\'" + textBox_uniprot_id.Text + "\'"); };
+            if (textBox_sekwencja.Text != null) { dict.Add(key: "sekwencja", value: "\'" + textBox_sekwencja.Text + "\'"); };
+
+            database_editRow("sekwencje_bialkowe", "id_sekwencji", textBox_id_sekw.Text, dict);
+
+
+            dataGridView_sekwencje.DataSource = sekwencjebialkoweBindingSource;
+            dataGridView_sekwencje.Refresh();
+        }
+
+        private void funkcje_edytujButton_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            //if (textBox_id_funk.Text != null) { dict.Add(key: "id_funkcji", value: "\'" + textBox_id_funk.Text + "\'"); };
+            if (textBox_nazwa_funk.Text != null) { dict.Add(key: "nazwa", value: "\'" + textBox_nazwa_funk.Text + "\'"); };
+            if (textBox_zrodlo_funk.Text != null) { dict.Add(key: "zrodlo", value: "\'" + textBox_zrodlo_funk.Text + "\'"); };
+            if (textBox_opis_funk.Text != null) { dict.Add(key: "opis", value: "\'" + textBox_opis_funk.Text + "\'"); };
+
+            database_editRow("funkcje_bialek", "id_funkcji", textBox_id_funk.Text, dict);
+
+
+            dataGridView_funkcje.DataSource = funkcjebialekBindingSource;
+            dataGridView_funkcje.Refresh();
+        }
+
+        private void szlaki_edytujButton_Click(object sender, EventArgs e)
+        {
+
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            //if (textBox_id_funk.Text != null) { dict.Add(key: "id_funkcji", value: "\'" + textBox_id_funk.Text + "\'"); };
+            if (textBox_nazwa_szlaku.Text != null) { dict.Add(key: "nazwa", value: "\'" + textBox_nazwa_szlaku.Text + "\'"); };
+            if (textBox_zrodlo_szlaku.Text != null) { dict.Add(key: "zrodlo", value: "\'" + textBox_zrodlo_szlaku.Text + "\'"); };
+            if (textBox_opis_szlaku.Text != null) { dict.Add(key: "opis", value: "\'" + textBox_opis_szlaku.Text + "\'"); };
+
+            database_editRow("szlaki_biochemiczne", "id_szlaku", textBox_id_szlaku.Text, dict);
+
+
+            dataGridView_szlaki.DataSource = szlakibiochemiczneBindingSource;
+            dataGridView_szlaki.Refresh();
+        }
+
+        private void kompleksy_edytujButton_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            //if (textBox_id_funk.Text != null) { dict.Add(key: "id_funkcji", value: "\'" + textBox_id_funk.Text + "\'"); };
+            if (textBox_nazwa_kom.Text != null) { dict.Add(key: "nazwa", value: "\'" + textBox_nazwa_kom.Text + "\'"); };
+            if (textBox_zrodlo_kom.Text != null) { dict.Add(key: "zrodlo", value: "\'" + textBox_zrodlo_kom.Text + "\'"); };
+            if (textBox_opis_kom.Text != null) { dict.Add(key: "opis", value: "\'" + textBox_opis_kom.Text + "\'"); };
+
+            database_editRow("kompleksy", "id_kompleksu", textBox_id_kom.Text, dict);
 
 
             dataGridView_kompleksy.DataSource = kompleksyBindingSource;

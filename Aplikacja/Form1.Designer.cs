@@ -178,6 +178,10 @@ namespace Aplikacja
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kompleksy_id_kompleksu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label33 = new System.Windows.Forms.Label();
+            this.sekwencje_edytujButton = new System.Windows.Forms.Button();
+            this.funkcje_edytujButton = new System.Windows.Forms.Button();
+            this.szlaki_edytujButton = new System.Windows.Forms.Button();
+            this.kompleksy_edytujButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Sekwencje.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -242,6 +246,7 @@ namespace Aplikacja
             // 
             // Sekwencje
             // 
+            this.Sekwencje.Controls.Add(this.sekwencje_edytujButton);
             this.Sekwencje.Controls.Add(this.label21);
             this.Sekwencje.Controls.Add(this.label16);
             this.Sekwencje.Controls.Add(this.label11);
@@ -609,6 +614,7 @@ namespace Aplikacja
             // 
             // Funkcje
             // 
+            this.Funkcje.Controls.Add(this.funkcje_edytujButton);
             this.Funkcje.Controls.Add(this.button4);
             this.Funkcje.Controls.Add(this.label25);
             this.Funkcje.Controls.Add(this.label24);
@@ -772,6 +778,7 @@ namespace Aplikacja
             // 
             // Szlaki_Biochem
             // 
+            this.Szlaki_Biochem.Controls.Add(this.szlaki_edytujButton);
             this.Szlaki_Biochem.Controls.Add(this.label29);
             this.Szlaki_Biochem.Controls.Add(this.label28);
             this.Szlaki_Biochem.Controls.Add(this.label27);
@@ -935,6 +942,7 @@ namespace Aplikacja
             // 
             // Kompleksy
             // 
+            this.Kompleksy.Controls.Add(this.kompleksy_edytujButton);
             this.Kompleksy.Controls.Add(this.label33);
             this.Kompleksy.Controls.Add(this.label30);
             this.Kompleksy.Controls.Add(this.label31);
@@ -1254,7 +1262,7 @@ namespace Aplikacja
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(814, 22);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(488, 30);
+            this.label23.Size = new System.Drawing.Size(325, 20);
             this.label23.TabIndex = 26;
             this.label23.Text = "Powiązanie sekwencji białkowych z funkcjami";
             // 
@@ -1263,7 +1271,7 @@ namespace Aplikacja
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(814, 582);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(140, 30);
+            this.label24.Size = new System.Drawing.Size(93, 20);
             this.label24.TabIndex = 27;
             this.label24.Text = "id sekwencji";
             // 
@@ -1272,7 +1280,7 @@ namespace Aplikacja
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(991, 582);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(105, 30);
+            this.label25.Size = new System.Drawing.Size(70, 20);
             this.label25.TabIndex = 28;
             this.label25.Text = "id funkcji";
             // 
@@ -1495,6 +1503,46 @@ namespace Aplikacja
             this.label33.TabIndex = 37;
             this.label33.Text = "Kompleksy";
             // 
+            // sekwencje_edytujButton
+            // 
+            this.sekwencje_edytujButton.Location = new System.Drawing.Point(177, 915);
+            this.sekwencje_edytujButton.Name = "sekwencje_edytujButton";
+            this.sekwencje_edytujButton.Size = new System.Drawing.Size(110, 40);
+            this.sekwencje_edytujButton.TabIndex = 19;
+            this.sekwencje_edytujButton.Text = "Edytuj";
+            this.sekwencje_edytujButton.UseVisualStyleBackColor = true;
+            this.sekwencje_edytujButton.Click += new System.EventHandler(this.sekwencje_edytujButton_Click);
+            // 
+            // funkcje_edytujButton
+            // 
+            this.funkcje_edytujButton.Location = new System.Drawing.Point(163, 865);
+            this.funkcje_edytujButton.Name = "funkcje_edytujButton";
+            this.funkcje_edytujButton.Size = new System.Drawing.Size(118, 43);
+            this.funkcje_edytujButton.TabIndex = 30;
+            this.funkcje_edytujButton.Text = "Edytuj";
+            this.funkcje_edytujButton.UseVisualStyleBackColor = true;
+            this.funkcje_edytujButton.Click += new System.EventHandler(this.funkcje_edytujButton_Click);
+            // 
+            // szlaki_edytujButton
+            // 
+            this.szlaki_edytujButton.Location = new System.Drawing.Point(158, 804);
+            this.szlaki_edytujButton.Name = "szlaki_edytujButton";
+            this.szlaki_edytujButton.Size = new System.Drawing.Size(118, 43);
+            this.szlaki_edytujButton.TabIndex = 31;
+            this.szlaki_edytujButton.Text = "Edytuj";
+            this.szlaki_edytujButton.UseVisualStyleBackColor = true;
+            this.szlaki_edytujButton.Click += new System.EventHandler(this.szlaki_edytujButton_Click);
+            // 
+            // kompleksy_edytujButton
+            // 
+            this.kompleksy_edytujButton.Location = new System.Drawing.Point(166, 841);
+            this.kompleksy_edytujButton.Name = "kompleksy_edytujButton";
+            this.kompleksy_edytujButton.Size = new System.Drawing.Size(118, 43);
+            this.kompleksy_edytujButton.TabIndex = 38;
+            this.kompleksy_edytujButton.Text = "Edytuj";
+            this.kompleksy_edytujButton.UseVisualStyleBackColor = true;
+            this.kompleksy_edytujButton.Click += new System.EventHandler(this.kompleksy_edytujButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1699,6 +1747,10 @@ namespace Aplikacja
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn kompleksy_id_kompleksu;
+        private System.Windows.Forms.Button sekwencje_edytujButton;
+        private System.Windows.Forms.Button funkcje_edytujButton;
+        private System.Windows.Forms.Button szlaki_edytujButton;
+        private System.Windows.Forms.Button kompleksy_edytujButton;
     }
 }
 
