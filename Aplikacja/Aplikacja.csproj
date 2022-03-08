@@ -77,6 +77,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Funkcje_bialek_dataset.xsd</DependentUpon>
     </Compile>
+    <Compile Include="funkcje_sekwDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>funkcje_sekwDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="KompleksyDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,6 +132,17 @@
     </None>
     <None Include="Funkcje_bialek_dataset.xss">
       <DependentUpon>Funkcje_bialek_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="funkcje_sekwDataSet.xsc">
+      <DependentUpon>funkcje_sekwDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="funkcje_sekwDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>funkcje_sekwDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="funkcje_sekwDataSet.xss">
+      <DependentUpon>funkcje_sekwDataSet.xsd</DependentUpon>
     </None>
     <None Include="KompleksyDataSet.xsc">
       <DependentUpon>KompleksyDataSet.xsd</DependentUpon>

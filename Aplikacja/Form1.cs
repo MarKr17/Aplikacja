@@ -19,6 +19,8 @@ namespace Aplikacja
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'funkcje_sekwDataSet.funkcje_sekw' . Możesz go przenieść lub usunąć.
+            this.funkcje_sekwTableAdapter.Fill(this.funkcje_sekwDataSet.funkcje_sekw);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'kompleksyDataSet.kompleksy' . Możesz go przenieść lub usunąć.
             this.kompleksyTableAdapter.Fill(this.kompleksyDataSet.kompleksy);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'szlakiDataSet.szlaki_biochemiczne' . Możesz go przenieść lub usunąć.
@@ -42,6 +44,7 @@ namespace Aplikacja
                 textBox_uniprot_id.Text = dataGridView_sekwencje.SelectedRows[0].Cells[3].Value.ToString();
                 textBox_sekwencja.Text = dataGridView_sekwencje.SelectedRows[0].Cells[4].Value.ToString();
 
+                ShowOnlyRelevant(dataGridView1, dataGridView_sekwencje.SelectedRows[0].Cells[0].Value, "sekwencje_bialkowe_id_sekwencji", funkcjesekwBindingSource );
 
             }
             
@@ -79,6 +82,16 @@ namespace Aplikacja
                 textBox_opis_kom.Text = dataGridView_kompleksy.SelectedRows[0].Cells[2].Value.ToString();
                 textBox_zrodlo_kom.Text = dataGridView_kompleksy.SelectedRows[0].Cells[3].Value.ToString();
             }
+        }
+
+        private void ShowOnlyRelevant(DataGridView datagridview, object value, string name, BindingSource source)
+        {
+            BindingSource source1 = new BindingSource();
+            source1 = source;
+            source1.Filter = $"{name} = {value}";
+            datagridview.DataSource = source1;
+            
+            
         }
     }
 }

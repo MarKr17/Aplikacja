@@ -112,6 +112,13 @@ namespace Aplikacja
             this.textBox_id_kom = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.funkcje_sekwDataSet = new Aplikacja.funkcje_sekwDataSet();
+            this.funkcjesekwBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.funkcje_sekwTableAdapter = new Aplikacja.funkcje_sekwDataSetTableAdapters.funkcje_sekwTableAdapter();
+            this.idfunkcjiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazwaDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zrodloDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.Sekwencje.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_sekwencje)).BeginInit();
@@ -132,6 +139,8 @@ namespace Aplikacja
             ((System.ComponentModel.ISupportInitialize)(this.funkcje_bialek_dataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funkcjebialekBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funkcje_sekwDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funkcjesekwBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -840,13 +849,66 @@ namespace Aplikacja
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 582);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idfunkcjiDataGridViewTextBoxColumn1,
+            this.nazwaDataGridViewTextBoxColumn4,
+            this.opisDataGridViewTextBoxColumn3,
+            this.zrodloDataGridViewTextBoxColumn3});
+            this.dataGridView1.DataSource = this.funkcjesekwBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(36, 605);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(456, 103);
+            this.dataGridView1.Size = new System.Drawing.Size(966, 140);
             this.dataGridView1.TabIndex = 12;
+            // 
+            // funkcje_sekwDataSet
+            // 
+            this.funkcje_sekwDataSet.DataSetName = "funkcje_sekwDataSet";
+            this.funkcje_sekwDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // funkcjesekwBindingSource
+            // 
+            this.funkcjesekwBindingSource.DataMember = "funkcje_sekw";
+            this.funkcjesekwBindingSource.DataSource = this.funkcje_sekwDataSet;
+            // 
+            // funkcje_sekwTableAdapter
+            // 
+            this.funkcje_sekwTableAdapter.ClearBeforeFill = true;
+            // 
+            // idfunkcjiDataGridViewTextBoxColumn1
+            // 
+            this.idfunkcjiDataGridViewTextBoxColumn1.DataPropertyName = "id_funkcji";
+            this.idfunkcjiDataGridViewTextBoxColumn1.HeaderText = "id_funkcji";
+            this.idfunkcjiDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.idfunkcjiDataGridViewTextBoxColumn1.Name = "idfunkcjiDataGridViewTextBoxColumn1";
+            this.idfunkcjiDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // nazwaDataGridViewTextBoxColumn4
+            // 
+            this.nazwaDataGridViewTextBoxColumn4.DataPropertyName = "nazwa";
+            this.nazwaDataGridViewTextBoxColumn4.HeaderText = "nazwa";
+            this.nazwaDataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.nazwaDataGridViewTextBoxColumn4.Name = "nazwaDataGridViewTextBoxColumn4";
+            this.nazwaDataGridViewTextBoxColumn4.Width = 150;
+            // 
+            // opisDataGridViewTextBoxColumn3
+            // 
+            this.opisDataGridViewTextBoxColumn3.DataPropertyName = "opis";
+            this.opisDataGridViewTextBoxColumn3.HeaderText = "opis";
+            this.opisDataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.opisDataGridViewTextBoxColumn3.Name = "opisDataGridViewTextBoxColumn3";
+            this.opisDataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // zrodloDataGridViewTextBoxColumn3
+            // 
+            this.zrodloDataGridViewTextBoxColumn3.DataPropertyName = "zrodlo";
+            this.zrodloDataGridViewTextBoxColumn3.HeaderText = "zrodlo";
+            this.zrodloDataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.zrodloDataGridViewTextBoxColumn3.Name = "zrodloDataGridViewTextBoxColumn3";
+            this.zrodloDataGridViewTextBoxColumn3.Width = 150;
             // 
             // Form1
             // 
@@ -881,6 +943,8 @@ namespace Aplikacja
             ((System.ComponentModel.ISupportInitialize)(this.funkcje_bialek_dataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funkcjebialekBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funkcje_sekwDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funkcjesekwBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -969,6 +1033,13 @@ namespace Aplikacja
         private System.Windows.Forms.TextBox textBox_id_kom;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private funkcje_sekwDataSet funkcje_sekwDataSet;
+        private System.Windows.Forms.BindingSource funkcjesekwBindingSource;
+        private funkcje_sekwDataSetTableAdapters.funkcje_sekwTableAdapter funkcje_sekwTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idfunkcjiDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazwaDataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zrodloDataGridViewTextBoxColumn3;
     }
 }
 

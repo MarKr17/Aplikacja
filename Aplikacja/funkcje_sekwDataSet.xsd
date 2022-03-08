@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="funkcje_sekwDataSet" targetNamespace="http://tempuri.org/funkcje_sekwDataSet.xsd" xmlns:mstns="http://tempuri.org/funkcje_sekwDataSet.xsd" xmlns="http://tempuri.org/funkcje_sekwDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Database1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Database1ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Aplikacja.Properties.Settings.GlobalReference.Default.Database1ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="funkcje_sekwTableAdapter" GeneratorDataComponentClassName="funkcje_sekwTableAdapter" Name="funkcje_sekw" UserDataComponentName="funkcje_sekwTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectName="dbo.funkcje_sekw" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT sekwencje_bialkowe_id_sekwencji, funkcje_bialek_id_funkcji, id_funkcji, nazwa, opis, zrodlo FROM dbo.funkcje_sekw</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="sekwencje_bialkowe_id_sekwencji" DataSetColumn="sekwencje_bialkowe_id_sekwencji" />
+              <Mapping SourceColumn="funkcje_bialek_id_funkcji" DataSetColumn="funkcje_bialek_id_funkcji" />
+              <Mapping SourceColumn="id_funkcji" DataSetColumn="id_funkcji" />
+              <Mapping SourceColumn="nazwa" DataSetColumn="nazwa" />
+              <Mapping SourceColumn="opis" DataSetColumn="opis" />
+              <Mapping SourceColumn="zrodlo" DataSetColumn="zrodlo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="funkcje_sekwDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="funkcje_sekwDataSet" msprop:Generator_UserDSName="funkcje_sekwDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="funkcje_sekw" msprop:Generator_TableClassName="funkcje_sekwDataTable" msprop:Generator_TableVarName="tablefunkcje_sekw" msprop:Generator_TablePropName="funkcje_sekw" msprop:Generator_RowDeletingName="funkcje_sekwRowDeleting" msprop:Generator_RowChangingName="funkcje_sekwRowChanging" msprop:Generator_RowEvHandlerName="funkcje_sekwRowChangeEventHandler" msprop:Generator_RowDeletedName="funkcje_sekwRowDeleted" msprop:Generator_UserTableName="funkcje_sekw" msprop:Generator_RowChangedName="funkcje_sekwRowChanged" msprop:Generator_RowEvArgName="funkcje_sekwRowChangeEvent" msprop:Generator_RowClassName="funkcje_sekwRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sekwencje_bialkowe_id_sekwencji" msprop:Generator_ColumnVarNameInTable="columnsekwencje_bialkowe_id_sekwencji" msprop:Generator_ColumnPropNameInRow="sekwencje_bialkowe_id_sekwencji" msprop:Generator_ColumnPropNameInTable="sekwencje_bialkowe_id_sekwencjiColumn" msprop:Generator_UserColumnName="sekwencje_bialkowe_id_sekwencji" type="xs:int" />
+              <xs:element name="funkcje_bialek_id_funkcji" msprop:Generator_ColumnVarNameInTable="columnfunkcje_bialek_id_funkcji" msprop:Generator_ColumnPropNameInRow="funkcje_bialek_id_funkcji" msprop:Generator_ColumnPropNameInTable="funkcje_bialek_id_funkcjiColumn" msprop:Generator_UserColumnName="funkcje_bialek_id_funkcji" type="xs:int" />
+              <xs:element name="id_funkcji" msprop:Generator_ColumnVarNameInTable="columnid_funkcji" msprop:Generator_ColumnPropNameInRow="id_funkcji" msprop:Generator_ColumnPropNameInTable="id_funkcjiColumn" msprop:Generator_UserColumnName="id_funkcji" type="xs:int" minOccurs="0" />
+              <xs:element name="nazwa" msprop:Generator_ColumnVarNameInTable="columnnazwa" msprop:Generator_ColumnPropNameInRow="nazwa" msprop:Generator_ColumnPropNameInTable="nazwaColumn" msprop:Generator_UserColumnName="nazwa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="opis" msprop:Generator_ColumnVarNameInTable="columnopis" msprop:Generator_ColumnPropNameInRow="opis" msprop:Generator_ColumnPropNameInTable="opisColumn" msprop:Generator_UserColumnName="opis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="zrodlo" msprop:Generator_ColumnVarNameInTable="columnzrodlo" msprop:Generator_ColumnPropNameInRow="zrodlo" msprop:Generator_ColumnPropNameInTable="zrodloColumn" msprop:Generator_UserColumnName="zrodlo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:funkcje_sekw" />
+      <xs:field xpath="mstns:sekwencje_bialkowe_id_sekwencji" />
+      <xs:field xpath="mstns:funkcje_bialek_id_funkcji" />
+      <xs:field xpath="mstns:id_funkcji" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
