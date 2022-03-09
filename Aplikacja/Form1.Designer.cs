@@ -33,6 +33,7 @@ namespace Aplikacja
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Start = new System.Windows.Forms.TabPage();
             this.Sekwencje = new System.Windows.Forms.TabPage();
+            this.sekwencje_usunButton = new System.Windows.Forms.Button();
             this.sekwencje_edytujButton = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -79,6 +80,8 @@ namespace Aplikacja
             this.sekwencjebialkoweBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sekwencjeDataSet = new Aplikacja.SekwencjeDataSet();
             this.Funkcje = new System.Windows.Forms.TabPage();
+            this.relation4_usunButton = new System.Windows.Forms.Button();
+            this.funkcje_usunButton = new System.Windows.Forms.Button();
             this.funkcje_edytujButton = new System.Windows.Forms.Button();
             this.relation4_addButton = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
@@ -109,6 +112,7 @@ namespace Aplikacja
             this.funkcjebialekBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.funkcjeDataSet = new Aplikacja.FunkcjeDataSet();
             this.Szlaki_Biochem = new System.Windows.Forms.TabPage();
+            this.szlaki_usunButton = new System.Windows.Forms.Button();
             this.szlaki_edytujButton = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -139,6 +143,7 @@ namespace Aplikacja
             this.szlakibiochemiczneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.szlakiDataSet = new Aplikacja.SzlakiDataSet();
             this.Kompleksy = new System.Windows.Forms.TabPage();
+            this.kompleksy_usunButton = new System.Windows.Forms.Button();
             this.kompleksy_edytujButton = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -182,10 +187,8 @@ namespace Aplikacja
             this.relation_4TableAdapter = new Aplikacja.relation4DataSetTableAdapters.relation_4TableAdapter();
             this.relation_1TableAdapter = new Aplikacja.relation1DataSetTableAdapters.relation_1TableAdapter();
             this.relation_3TableAdapter = new Aplikacja.Database1DataSetTableAdapters.relation_3TableAdapter();
-            this.sekwencje_usunButton = new System.Windows.Forms.Button();
-            this.funkcje_usunButton = new System.Windows.Forms.Button();
-            this.szlaki_usunButton = new System.Windows.Forms.Button();
-            this.kompleksy_usunButton = new System.Windows.Forms.Button();
+            this.relation1_usunButton = new System.Windows.Forms.Button();
+            this.relation3_usunButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Sekwencje.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -278,6 +281,16 @@ namespace Aplikacja
             this.Sekwencje.TabIndex = 1;
             this.Sekwencje.Text = "Sekwencje";
             this.Sekwencje.UseVisualStyleBackColor = true;
+            // 
+            // sekwencje_usunButton
+            // 
+            this.sekwencje_usunButton.Location = new System.Drawing.Point(346, 915);
+            this.sekwencje_usunButton.Name = "sekwencje_usunButton";
+            this.sekwencje_usunButton.Size = new System.Drawing.Size(113, 40);
+            this.sekwencje_usunButton.TabIndex = 20;
+            this.sekwencje_usunButton.Text = "Usuń";
+            this.sekwencje_usunButton.UseVisualStyleBackColor = true;
+            this.sekwencje_usunButton.Click += new System.EventHandler(this.sekwencje_usunButton_Click);
             // 
             // sekwencje_edytujButton
             // 
@@ -665,6 +678,7 @@ namespace Aplikacja
             // 
             // Funkcje
             // 
+            this.Funkcje.Controls.Add(this.relation4_usunButton);
             this.Funkcje.Controls.Add(this.funkcje_usunButton);
             this.Funkcje.Controls.Add(this.funkcje_edytujButton);
             this.Funkcje.Controls.Add(this.relation4_addButton);
@@ -692,6 +706,26 @@ namespace Aplikacja
             this.Funkcje.Text = "Funkcje";
             this.Funkcje.UseVisualStyleBackColor = true;
             // 
+            // relation4_usunButton
+            // 
+            this.relation4_usunButton.Location = new System.Drawing.Point(1019, 701);
+            this.relation4_usunButton.Name = "relation4_usunButton";
+            this.relation4_usunButton.Size = new System.Drawing.Size(149, 40);
+            this.relation4_usunButton.TabIndex = 32;
+            this.relation4_usunButton.Text = "Usuń";
+            this.relation4_usunButton.UseVisualStyleBackColor = true;
+            this.relation4_usunButton.Click += new System.EventHandler(this.relation4_usunButton_Click);
+            // 
+            // funkcje_usunButton
+            // 
+            this.funkcje_usunButton.Location = new System.Drawing.Point(330, 865);
+            this.funkcje_usunButton.Name = "funkcje_usunButton";
+            this.funkcje_usunButton.Size = new System.Drawing.Size(118, 43);
+            this.funkcje_usunButton.TabIndex = 31;
+            this.funkcje_usunButton.Text = "Usuń";
+            this.funkcje_usunButton.UseVisualStyleBackColor = true;
+            this.funkcje_usunButton.Click += new System.EventHandler(this.funkcje_usunButton_Click);
+            // 
             // funkcje_edytujButton
             // 
             this.funkcje_edytujButton.Location = new System.Drawing.Point(163, 865);
@@ -708,7 +742,7 @@ namespace Aplikacja
             this.relation4_addButton.Name = "relation4_addButton";
             this.relation4_addButton.Size = new System.Drawing.Size(149, 40);
             this.relation4_addButton.TabIndex = 29;
-            this.relation4_addButton.Text = "Dodaj zależność";
+            this.relation4_addButton.Text = "Dodaj";
             this.relation4_addButton.UseVisualStyleBackColor = true;
             this.relation4_addButton.Click += new System.EventHandler(this.relation4_addButton_Click);
             // 
@@ -846,7 +880,7 @@ namespace Aplikacja
             this.funkcje_zapiszButton.Name = "funkcje_zapiszButton";
             this.funkcje_zapiszButton.Size = new System.Drawing.Size(98, 43);
             this.funkcje_zapiszButton.TabIndex = 17;
-            this.funkcje_zapiszButton.Text = "Zapisz";
+            this.funkcje_zapiszButton.Text = "Dodaj";
             this.funkcje_zapiszButton.UseVisualStyleBackColor = true;
             this.funkcje_zapiszButton.Click += new System.EventHandler(this.funkcje_zapiszButton_Click);
             // 
@@ -942,6 +976,7 @@ namespace Aplikacja
             // 
             // Szlaki_Biochem
             // 
+            this.Szlaki_Biochem.Controls.Add(this.relation1_usunButton);
             this.Szlaki_Biochem.Controls.Add(this.szlaki_usunButton);
             this.Szlaki_Biochem.Controls.Add(this.szlaki_edytujButton);
             this.Szlaki_Biochem.Controls.Add(this.label29);
@@ -968,6 +1003,16 @@ namespace Aplikacja
             this.Szlaki_Biochem.TabIndex = 3;
             this.Szlaki_Biochem.Text = "Szlaki Biochemiczne";
             this.Szlaki_Biochem.UseVisualStyleBackColor = true;
+            // 
+            // szlaki_usunButton
+            // 
+            this.szlaki_usunButton.Location = new System.Drawing.Point(322, 804);
+            this.szlaki_usunButton.Name = "szlaki_usunButton";
+            this.szlaki_usunButton.Size = new System.Drawing.Size(118, 43);
+            this.szlaki_usunButton.TabIndex = 32;
+            this.szlaki_usunButton.Text = "Usuń";
+            this.szlaki_usunButton.UseVisualStyleBackColor = true;
+            this.szlaki_usunButton.Click += new System.EventHandler(this.szlaki_usunButton_Click);
             // 
             // szlaki_edytujButton
             // 
@@ -1017,11 +1062,11 @@ namespace Aplikacja
             // 
             // relation1_addButton
             // 
-            this.relation1_addButton.Location = new System.Drawing.Point(837, 695);
+            this.relation1_addButton.Location = new System.Drawing.Point(827, 684);
             this.relation1_addButton.Name = "relation1_addButton";
-            this.relation1_addButton.Size = new System.Drawing.Size(170, 54);
+            this.relation1_addButton.Size = new System.Drawing.Size(170, 40);
             this.relation1_addButton.TabIndex = 25;
-            this.relation1_addButton.Text = "Dodaj zależność";
+            this.relation1_addButton.Text = "Dodaj";
             this.relation1_addButton.UseVisualStyleBackColor = true;
             this.relation1_addButton.Click += new System.EventHandler(this.relation1_addButton_Click);
             // 
@@ -1123,7 +1168,7 @@ namespace Aplikacja
             this.szlaki_zapiszButton.Name = "szlaki_zapiszButton";
             this.szlaki_zapiszButton.Size = new System.Drawing.Size(98, 43);
             this.szlaki_zapiszButton.TabIndex = 17;
-            this.szlaki_zapiszButton.Text = "Zapisz";
+            this.szlaki_zapiszButton.Text = "Dodaj";
             this.szlaki_zapiszButton.UseVisualStyleBackColor = true;
             this.szlaki_zapiszButton.Click += new System.EventHandler(this.szlaki_zapiszButton_Click);
             // 
@@ -1219,6 +1264,7 @@ namespace Aplikacja
             // 
             // Kompleksy
             // 
+            this.Kompleksy.Controls.Add(this.relation3_usunButton);
             this.Kompleksy.Controls.Add(this.kompleksy_usunButton);
             this.Kompleksy.Controls.Add(this.kompleksy_edytujButton);
             this.Kompleksy.Controls.Add(this.label33);
@@ -1245,6 +1291,16 @@ namespace Aplikacja
             this.Kompleksy.TabIndex = 4;
             this.Kompleksy.Text = "Kompleksy";
             this.Kompleksy.UseVisualStyleBackColor = true;
+            // 
+            // kompleksy_usunButton
+            // 
+            this.kompleksy_usunButton.Location = new System.Drawing.Point(337, 841);
+            this.kompleksy_usunButton.Name = "kompleksy_usunButton";
+            this.kompleksy_usunButton.Size = new System.Drawing.Size(118, 43);
+            this.kompleksy_usunButton.TabIndex = 39;
+            this.kompleksy_usunButton.Text = "Usuń";
+            this.kompleksy_usunButton.UseVisualStyleBackColor = true;
+            this.kompleksy_usunButton.Click += new System.EventHandler(this.kompleksy_usunButton_Click);
             // 
             // kompleksy_edytujButton
             // 
@@ -1296,9 +1352,9 @@ namespace Aplikacja
             // 
             this.relation3_addButton.Location = new System.Drawing.Point(929, 698);
             this.relation3_addButton.Name = "relation3_addButton";
-            this.relation3_addButton.Size = new System.Drawing.Size(170, 54);
+            this.relation3_addButton.Size = new System.Drawing.Size(162, 40);
             this.relation3_addButton.TabIndex = 33;
-            this.relation3_addButton.Text = "Dodaj zależność";
+            this.relation3_addButton.Text = "Dodaj";
             this.relation3_addButton.UseVisualStyleBackColor = true;
             this.relation3_addButton.Click += new System.EventHandler(this.relation3_addButton_Click);
             // 
@@ -1400,7 +1456,7 @@ namespace Aplikacja
             this.kompleksy_zapiszButton.Name = "kompleksy_zapiszButton";
             this.kompleksy_zapiszButton.Size = new System.Drawing.Size(98, 43);
             this.kompleksy_zapiszButton.TabIndex = 17;
-            this.kompleksy_zapiszButton.Text = "Zapisz";
+            this.kompleksy_zapiszButton.Text = "Dodaj";
             this.kompleksy_zapiszButton.UseVisualStyleBackColor = true;
             this.kompleksy_zapiszButton.Click += new System.EventHandler(this.kompleksy_zapiszButton_Click);
             // 
@@ -1554,45 +1610,25 @@ namespace Aplikacja
             // 
             this.relation_3TableAdapter.ClearBeforeFill = true;
             // 
-            // sekwencje_usunButton
+            // relation1_usunButton
             // 
-            this.sekwencje_usunButton.Location = new System.Drawing.Point(346, 915);
-            this.sekwencje_usunButton.Name = "sekwencje_usunButton";
-            this.sekwencje_usunButton.Size = new System.Drawing.Size(113, 40);
-            this.sekwencje_usunButton.TabIndex = 20;
-            this.sekwencje_usunButton.Text = "Usuń";
-            this.sekwencje_usunButton.UseVisualStyleBackColor = true;
-            this.sekwencje_usunButton.Click += new System.EventHandler(this.sekwencje_usunButton_Click);
+            this.relation1_usunButton.Location = new System.Drawing.Point(1019, 684);
+            this.relation1_usunButton.Name = "relation1_usunButton";
+            this.relation1_usunButton.Size = new System.Drawing.Size(149, 40);
+            this.relation1_usunButton.TabIndex = 33;
+            this.relation1_usunButton.Text = "Usuń";
+            this.relation1_usunButton.UseVisualStyleBackColor = true;
+            this.relation1_usunButton.Click += new System.EventHandler(this.relation1_usunButton_Click);
             // 
-            // funkcje_usunButton
+            // relation3_usunButton
             // 
-            this.funkcje_usunButton.Location = new System.Drawing.Point(330, 865);
-            this.funkcje_usunButton.Name = "funkcje_usunButton";
-            this.funkcje_usunButton.Size = new System.Drawing.Size(118, 43);
-            this.funkcje_usunButton.TabIndex = 31;
-            this.funkcje_usunButton.Text = "Usuń";
-            this.funkcje_usunButton.UseVisualStyleBackColor = true;
-            this.funkcje_usunButton.Click += new System.EventHandler(this.funkcje_usunButton_Click);
-            // 
-            // szlaki_usunButton
-            // 
-            this.szlaki_usunButton.Location = new System.Drawing.Point(322, 804);
-            this.szlaki_usunButton.Name = "szlaki_usunButton";
-            this.szlaki_usunButton.Size = new System.Drawing.Size(118, 43);
-            this.szlaki_usunButton.TabIndex = 32;
-            this.szlaki_usunButton.Text = "Usuń";
-            this.szlaki_usunButton.UseVisualStyleBackColor = true;
-            this.szlaki_usunButton.Click += new System.EventHandler(this.szlaki_usunButton_Click);
-            // 
-            // kompleksy_usunButton
-            // 
-            this.kompleksy_usunButton.Location = new System.Drawing.Point(337, 841);
-            this.kompleksy_usunButton.Name = "kompleksy_usunButton";
-            this.kompleksy_usunButton.Size = new System.Drawing.Size(118, 43);
-            this.kompleksy_usunButton.TabIndex = 39;
-            this.kompleksy_usunButton.Text = "Usuń";
-            this.kompleksy_usunButton.UseVisualStyleBackColor = true;
-            this.kompleksy_usunButton.Click += new System.EventHandler(this.kompleksy_usunButton_Click);
+            this.relation3_usunButton.Location = new System.Drawing.Point(1115, 698);
+            this.relation3_usunButton.Name = "relation3_usunButton";
+            this.relation3_usunButton.Size = new System.Drawing.Size(149, 40);
+            this.relation3_usunButton.TabIndex = 40;
+            this.relation3_usunButton.Text = "Usuń";
+            this.relation3_usunButton.UseVisualStyleBackColor = true;
+            this.relation3_usunButton.Click += new System.EventHandler(this.relation3_usunButton_Click);
             // 
             // Form1
             // 
@@ -1806,6 +1842,9 @@ namespace Aplikacja
         private System.Windows.Forms.Button funkcje_usunButton;
         private System.Windows.Forms.Button szlaki_usunButton;
         private System.Windows.Forms.Button kompleksy_usunButton;
+        private System.Windows.Forms.Button relation4_usunButton;
+        private System.Windows.Forms.Button relation1_usunButton;
+        private System.Windows.Forms.Button relation3_usunButton;
     }
 }
 

@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Aplikacja
@@ -169,15 +165,17 @@ namespace Aplikacja
             sqlConnection1.Close();
         }
 
-        private void database_deleteRow(string table_name, string id_name, string id)
+        private void database_deleteRow(string table_name, Dictionary<string, string> dict)
         {
+            string res = string.Join(" AND ", dict.Select(p => p.Key + " = " + p.Value));
+
             System.Data.SqlClient.SqlConnection sqlConnection1 =
                         new System.Data.SqlClient.SqlConnection("Data Source=(LocalDB)\\" +
                         "MSSQLLocalDB;AttachDbFilename=C:\\Users\\Marysia\\source\\repos\\Aplikacja\\Aplikacja\\Database1.mdf;Integrated Security=True");
 
             System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"DELETE FROM {table_name} WHERE {id_name} = {id};";
+            cmd.CommandText = $"DELETE FROM {table_name} WHERE {res};";
             cmd.Connection = sqlConnection1;
 
             sqlConnection1.Open();
@@ -317,7 +315,9 @@ namespace Aplikacja
 
         private void sekwencje_usunButton_Click(object sender, EventArgs e)
         {
-            database_deleteRow("sekwencje_bialkowe", "id_sekwencji", textBox_id_sekw.Text);
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add(key: "id_sekwencji", value: textBox_id_sekw.Text);
+            database_deleteRow("sekwencje_bialkowe", dict);
 
 
             dataGridView_sekwencje.DataSource = sekwencjebialkoweBindingSource;
@@ -326,18 +326,30 @@ namespace Aplikacja
 
         private void funkcje_usunButton_Click(object sender, EventArgs e)
         {
-            database_deleteRow("funkcje_bialek", "id_funkcji", textBox_id_funk.Text);
+
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add(key: "id_funkcji", value: textBox_id_funk.Text);
+            
+
+            database_deleteRow("funkcje_bialek", dict);
 
         }
 
         private void szlaki_usunButton_Click(object sender, EventArgs e)
         {
-            database_deleteRow("szlaki_biochemiczne", "id_szlaku", textBox_id_szlaku.Text);
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add(key: "id_szlaku", value: textBox_id_szlaku.Text);
+            
+
+            database_deleteRow("szlaki_biochemiczne", dict);
         }
 
         private void kompleksy_usunButton_Click(object sender, EventArgs e)
         {
-            database_deleteRow("kompleksy", "id_kompleksu", textBox_id_kom.Text);
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add(key: "id_kompleksu", value: textBox_id_kom.Text);
+
+            database_deleteRow("kompleksy", dict);
 
         }
 
@@ -370,6 +382,36 @@ namespace Aplikacja
             if (textBox5.Text != null) { dict.Add(key: "kompleksy_id_kompleksu", value: "\'" + textBox5.Text + "\'"); };
 
             database_addRow("relation_3", dict);
+        }
+
+        private void relation4_usunButton_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            if (textBox1.Text != null) { dict.Add(key: "sekwencje_bialkowe_id_sekwencji", value: textBox1.Text ); };
+            if (textBox2.Text != null) { dict.Add(key: "funkcje_bialek_id_funkcji", value: textBox2.Text ); };
+
+            database_deleteRow("relation_4", dict);
+        }
+
+        private void relation1_usunButton_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            if (textBox3.Text != null) { dict.Add(key: "sekwencje_bialkowe_id_sekwencji", value: "\'" + textBox3.Text + "\'"); };
+            if (textBox4.Text != null) { dict.Add(key: "szlaki_biochemiczne_id_szlaku", value: "\'" + textBox4.Text + "\'"); };
+
+            database_deleteRow("relation_1", dict);
+        }
+
+        private void relation3_usunButton_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            if (textBox6.Text != null) { dict.Add(key: "sekwencje_bialkowe_id_sekwencji", value: "\'" + textBox6.Text + "\'"); };
+            if (textBox5.Text != null) { dict.Add(key: "kompleksy_id_kompleksu", value: "\'" + textBox5.Text + "\'"); };
+
+            database_deleteRow("relation_3", dict);
         }
     }
 }
