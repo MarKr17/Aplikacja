@@ -47,12 +47,6 @@ namespace Aplikacja
             this.sekwencjekompleksyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sekwencje_kompleksyDataSet = new Aplikacja.sekwencje_kompleksyDataSet();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.idszlakuDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazwaDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opisDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zrodloDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sekwencjeszlakiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sekwencje_szlakiDataSet = new Aplikacja.sekwencje_szlakiDataSet();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idfunkcjiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwaDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -177,7 +171,6 @@ namespace Aplikacja
             this.kompleksyTableAdapter = new Aplikacja.KompleksyDataSetTableAdapters.kompleksyTableAdapter();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.funkcje_sekwTableAdapter = new Aplikacja.funkcje_sekwDataSetTableAdapters.funkcje_sekwTableAdapter();
-            this.sekwencje_szlakiTableAdapter = new Aplikacja.sekwencje_szlakiDataSetTableAdapters.sekwencje_szlakiTableAdapter();
             this.sekwencje_kompleksyTableAdapter = new Aplikacja.sekwencje_kompleksyDataSetTableAdapters.sekwencje_kompleksyTableAdapter();
             this.relation_4TableAdapter = new Aplikacja.relation4DataSetTableAdapters.relation_4TableAdapter();
             this.relation_1TableAdapter = new Aplikacja.relation1DataSetTableAdapters.relation_1TableAdapter();
@@ -203,6 +196,21 @@ namespace Aplikacja
             this.generuj_button1 = new System.Windows.Forms.Button();
             this.wykonaj_button = new System.Windows.Forms.Button();
             this.dodaj_button = new System.Windows.Forms.Button();
+            this.idszlakuDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazwaDataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zrodloDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sekwencjeszlakiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sekwencje_szlakiDataSet = new Aplikacja.sekwencje_szlakiDataSet();
+            this.sekwencje_szlakiTableAdapter = new Aplikacja.sekwencje_szlakiDataSetTableAdapters.sekwencje_szlakiTableAdapter();
+            this.sekwencje_bialkoweDataSet1 = new Aplikacja.Sekwencje_bialkoweDataSet1();
+            this.sekwencjebialkoweBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sekwencje_bialkoweTableAdapter1 = new Aplikacja.Sekwencje_bialkoweDataSet1TableAdapters.sekwencje_bialkoweTableAdapter();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazwaDataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.Entrez.SuspendLayout();
             this.Sekwencje.SuspendLayout();
@@ -210,8 +218,6 @@ namespace Aplikacja
             ((System.ComponentModel.ISupportInitialize)(this.sekwencjekompleksyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sekwencje_kompleksyDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sekwencjeszlakiBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sekwencje_szlakiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funkcjesekwBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funkcje_sekwDataSet)).BeginInit();
@@ -240,6 +246,10 @@ namespace Aplikacja
             ((System.ComponentModel.ISupportInitialize)(this.kompleksyDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funkcje_bialek_dataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funkcjebialekBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sekwencjeszlakiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sekwencje_szlakiDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sekwencje_bialkoweDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sekwencjebialkoweBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -449,48 +459,6 @@ namespace Aplikacja
             this.dataGridView2.Size = new System.Drawing.Size(653, 280);
             this.dataGridView2.TabIndex = 13;
             // 
-            // idszlakuDataGridViewTextBoxColumn1
-            // 
-            this.idszlakuDataGridViewTextBoxColumn1.DataPropertyName = "id_szlaku";
-            this.idszlakuDataGridViewTextBoxColumn1.HeaderText = "id_szlaku";
-            this.idszlakuDataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.idszlakuDataGridViewTextBoxColumn1.Name = "idszlakuDataGridViewTextBoxColumn1";
-            this.idszlakuDataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // nazwaDataGridViewTextBoxColumn5
-            // 
-            this.nazwaDataGridViewTextBoxColumn5.DataPropertyName = "nazwa";
-            this.nazwaDataGridViewTextBoxColumn5.HeaderText = "nazwa";
-            this.nazwaDataGridViewTextBoxColumn5.MinimumWidth = 8;
-            this.nazwaDataGridViewTextBoxColumn5.Name = "nazwaDataGridViewTextBoxColumn5";
-            this.nazwaDataGridViewTextBoxColumn5.Width = 150;
-            // 
-            // opisDataGridViewTextBoxColumn4
-            // 
-            this.opisDataGridViewTextBoxColumn4.DataPropertyName = "opis";
-            this.opisDataGridViewTextBoxColumn4.HeaderText = "opis";
-            this.opisDataGridViewTextBoxColumn4.MinimumWidth = 8;
-            this.opisDataGridViewTextBoxColumn4.Name = "opisDataGridViewTextBoxColumn4";
-            this.opisDataGridViewTextBoxColumn4.Width = 150;
-            // 
-            // zrodloDataGridViewTextBoxColumn4
-            // 
-            this.zrodloDataGridViewTextBoxColumn4.DataPropertyName = "zrodlo";
-            this.zrodloDataGridViewTextBoxColumn4.HeaderText = "zrodlo";
-            this.zrodloDataGridViewTextBoxColumn4.MinimumWidth = 8;
-            this.zrodloDataGridViewTextBoxColumn4.Name = "zrodloDataGridViewTextBoxColumn4";
-            this.zrodloDataGridViewTextBoxColumn4.Width = 150;
-            // 
-            // sekwencjeszlakiBindingSource
-            // 
-            this.sekwencjeszlakiBindingSource.DataMember = "sekwencje_szlaki";
-            this.sekwencjeszlakiBindingSource.DataSource = this.sekwencje_szlakiDataSet;
-            // 
-            // sekwencje_szlakiDataSet
-            // 
-            this.sekwencje_szlakiDataSet.DataSetName = "sekwencje_szlakiDataSet";
-            this.sekwencje_szlakiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -645,7 +613,13 @@ namespace Aplikacja
             // 
             this.dataGridView_sekwencje.AutoGenerateColumns = false;
             this.dataGridView_sekwencje.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_sekwencje.DataSource = this.sekwencjebialkoweBindingSource;
+            this.dataGridView_sekwencje.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.nazwaDataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.dataGridView_sekwencje.DataSource = this.sekwencjebialkoweBindingSource1;
             this.dataGridView_sekwencje.Location = new System.Drawing.Point(25, 65);
             this.dataGridView_sekwencje.Name = "dataGridView_sekwencje";
             this.dataGridView_sekwencje.RowHeadersWidth = 62;
@@ -1588,10 +1562,6 @@ namespace Aplikacja
             // 
             this.funkcje_sekwTableAdapter.ClearBeforeFill = true;
             // 
-            // sekwencje_szlakiTableAdapter
-            // 
-            this.sekwencje_szlakiTableAdapter.ClearBeforeFill = true;
-            // 
             // sekwencje_kompleksyTableAdapter
             // 
             this.sekwencje_kompleksyTableAdapter.ClearBeforeFill = true;
@@ -1671,7 +1641,7 @@ namespace Aplikacja
             this.label34.AutoSize = true;
             this.label34.Location = new System.Drawing.Point(40, 45);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(119, 30);
+            this.label34.Size = new System.Drawing.Size(79, 20);
             this.label34.TabIndex = 8;
             this.label34.Text = "Zapytanie";
             // 
@@ -1680,7 +1650,7 @@ namespace Aplikacja
             this.label35.AutoSize = true;
             this.label35.Location = new System.Drawing.Point(856, 42);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(39, 30);
+            this.label35.Size = new System.Drawing.Size(26, 20);
             this.label35.TabIndex = 9;
             this.label35.Text = "ID";
             // 
@@ -1689,7 +1659,7 @@ namespace Aplikacja
             this.label36.AutoSize = true;
             this.label36.Location = new System.Drawing.Point(1028, 42);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(75, 30);
+            this.label36.Size = new System.Drawing.Size(50, 20);
             this.label36.TabIndex = 10;
             this.label36.Text = "Fraza";
             // 
@@ -1698,7 +1668,7 @@ namespace Aplikacja
             this.label37.AutoSize = true;
             this.label37.Location = new System.Drawing.Point(1186, 42);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(129, 30);
+            this.label37.Size = new System.Drawing.Size(86, 20);
             this.label37.TabIndex = 11;
             this.label37.Text = "baza NCBI";
             // 
@@ -1716,7 +1686,7 @@ namespace Aplikacja
             this.label39.AutoSize = true;
             this.label39.Location = new System.Drawing.Point(43, 715);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(129, 30);
+            this.label39.Size = new System.Drawing.Size(86, 20);
             this.label39.TabIndex = 13;
             this.label39.Text = "Sekwencja";
             // 
@@ -1725,7 +1695,7 @@ namespace Aplikacja
             this.label40.AutoSize = true;
             this.label40.Location = new System.Drawing.Point(534, 712);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(102, 30);
+            this.label40.Size = new System.Drawing.Size(68, 20);
             this.label40.TabIndex = 14;
             this.label40.Text = "NCBI ID";
             // 
@@ -1734,7 +1704,7 @@ namespace Aplikacja
             this.Nazwa.AutoSize = true;
             this.Nazwa.Location = new System.Drawing.Point(683, 712);
             this.Nazwa.Name = "Nazwa";
-            this.Nazwa.Size = new System.Drawing.Size(86, 30);
+            this.Nazwa.Size = new System.Drawing.Size(57, 20);
             this.Nazwa.TabIndex = 15;
             this.Nazwa.Text = "Nazwa";
             // 
@@ -1790,6 +1760,107 @@ namespace Aplikacja
             this.dodaj_button.UseVisualStyleBackColor = true;
             this.dodaj_button.Click += new System.EventHandler(this.dodaj_button_Click);
             // 
+            // idszlakuDataGridViewTextBoxColumn1
+            // 
+            this.idszlakuDataGridViewTextBoxColumn1.DataPropertyName = "id_szlaku";
+            this.idszlakuDataGridViewTextBoxColumn1.HeaderText = "id_szlaku";
+            this.idszlakuDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.idszlakuDataGridViewTextBoxColumn1.Name = "idszlakuDataGridViewTextBoxColumn1";
+            this.idszlakuDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // nazwaDataGridViewTextBoxColumn5
+            // 
+            this.nazwaDataGridViewTextBoxColumn5.DataPropertyName = "nazwa";
+            this.nazwaDataGridViewTextBoxColumn5.HeaderText = "nazwa";
+            this.nazwaDataGridViewTextBoxColumn5.MinimumWidth = 8;
+            this.nazwaDataGridViewTextBoxColumn5.Name = "nazwaDataGridViewTextBoxColumn5";
+            this.nazwaDataGridViewTextBoxColumn5.Width = 150;
+            // 
+            // opisDataGridViewTextBoxColumn4
+            // 
+            this.opisDataGridViewTextBoxColumn4.DataPropertyName = "opis";
+            this.opisDataGridViewTextBoxColumn4.HeaderText = "opis";
+            this.opisDataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.opisDataGridViewTextBoxColumn4.Name = "opisDataGridViewTextBoxColumn4";
+            this.opisDataGridViewTextBoxColumn4.Width = 150;
+            // 
+            // zrodloDataGridViewTextBoxColumn4
+            // 
+            this.zrodloDataGridViewTextBoxColumn4.DataPropertyName = "zrodlo";
+            this.zrodloDataGridViewTextBoxColumn4.HeaderText = "zrodlo";
+            this.zrodloDataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.zrodloDataGridViewTextBoxColumn4.Name = "zrodloDataGridViewTextBoxColumn4";
+            this.zrodloDataGridViewTextBoxColumn4.Width = 150;
+            // 
+            // sekwencjeszlakiBindingSource
+            // 
+            this.sekwencjeszlakiBindingSource.DataMember = "sekwencje_szlaki";
+            this.sekwencjeszlakiBindingSource.DataSource = this.sekwencje_szlakiDataSet;
+            // 
+            // sekwencje_szlakiDataSet
+            // 
+            this.sekwencje_szlakiDataSet.DataSetName = "sekwencje_szlakiDataSet";
+            this.sekwencje_szlakiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sekwencje_szlakiTableAdapter
+            // 
+            this.sekwencje_szlakiTableAdapter.ClearBeforeFill = true;
+            // 
+            // sekwencje_bialkoweDataSet1
+            // 
+            this.sekwencje_bialkoweDataSet1.DataSetName = "Sekwencje_bialkoweDataSet1";
+            this.sekwencje_bialkoweDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sekwencjebialkoweBindingSource1
+            // 
+            this.sekwencjebialkoweBindingSource1.DataMember = "sekwencje_bialkowe";
+            this.sekwencjebialkoweBindingSource1.DataSource = this.sekwencje_bialkoweDataSet1;
+            // 
+            // sekwencje_bialkoweTableAdapter1
+            // 
+            this.sekwencje_bialkoweTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "id_sekwencji";
+            this.dataGridViewTextBoxColumn2.HeaderText = "id_sekwencji";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // nazwaDataGridViewTextBoxColumn7
+            // 
+            this.nazwaDataGridViewTextBoxColumn7.DataPropertyName = "nazwa";
+            this.nazwaDataGridViewTextBoxColumn7.HeaderText = "nazwa";
+            this.nazwaDataGridViewTextBoxColumn7.MinimumWidth = 8;
+            this.nazwaDataGridViewTextBoxColumn7.Name = "nazwaDataGridViewTextBoxColumn7";
+            this.nazwaDataGridViewTextBoxColumn7.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ncbi_id";
+            this.dataGridViewTextBoxColumn3.HeaderText = "ncbi_id";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "uniprot_id";
+            this.dataGridViewTextBoxColumn4.HeaderText = "uniprot_id";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "sekwencja";
+            this.dataGridViewTextBoxColumn5.HeaderText = "sekwencja";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 150;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1808,8 +1879,6 @@ namespace Aplikacja
             ((System.ComponentModel.ISupportInitialize)(this.sekwencjekompleksyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sekwencje_kompleksyDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sekwencjeszlakiBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sekwencje_szlakiDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funkcjesekwBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funkcje_sekwDataSet)).EndInit();
@@ -1841,6 +1910,10 @@ namespace Aplikacja
             ((System.ComponentModel.ISupportInitialize)(this.kompleksyDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funkcje_bialek_dataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funkcjebialekBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sekwencjeszlakiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sekwencje_szlakiDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sekwencje_bialkoweDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sekwencjebialkoweBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2027,6 +2100,14 @@ namespace Aplikacja
         private System.Windows.Forms.TextBox fraza_textBox;
         private System.Windows.Forms.TextBox id_textBox;
         private System.Windows.Forms.TextBox zapytanie_textBox;
+        private Sekwencje_bialkoweDataSet1 sekwencje_bialkoweDataSet1;
+        private System.Windows.Forms.BindingSource sekwencjebialkoweBindingSource1;
+        private Sekwencje_bialkoweDataSet1TableAdapters.sekwencje_bialkoweTableAdapter sekwencje_bialkoweTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazwaDataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }
 

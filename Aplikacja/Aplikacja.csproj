@@ -109,6 +109,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SekwencjeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Sekwencje_bialkoweDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sekwencje_bialkoweDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="sekwencje_kompleksyDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -232,6 +237,17 @@
     </None>
     <None Include="SekwencjeDataSet.xss">
       <DependentUpon>SekwencjeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sekwencje_bialkoweDataSet1.xsc">
+      <DependentUpon>Sekwencje_bialkoweDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Sekwencje_bialkoweDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sekwencje_bialkoweDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sekwencje_bialkoweDataSet1.xss">
+      <DependentUpon>Sekwencje_bialkoweDataSet1.xsd</DependentUpon>
     </None>
     <None Include="sekwencje_kompleksyDataSet.xsc">
       <DependentUpon>sekwencje_kompleksyDataSet.xsd</DependentUpon>

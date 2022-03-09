@@ -18,6 +18,8 @@ namespace Aplikacja
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'sekwencje_bialkoweDataSet1.sekwencje_bialkowe' . Możesz go przenieść lub usunąć.
+            this.sekwencje_bialkoweTableAdapter1.Fill(this.sekwencje_bialkoweDataSet1.sekwencje_bialkowe);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'database1DataSet.relation_3' . Możesz go przenieść lub usunąć.
             this.relation_3TableAdapter.Fill(this.database1DataSet.relation_3);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'relation1DataSet.relation_1' . Możesz go przenieść lub usunąć.
@@ -35,7 +37,7 @@ namespace Aplikacja
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'szlakiDataSet.szlaki_biochemiczne' . Możesz go przenieść lub usunąć.
             this.szlaki_biochemiczneTableAdapter.Fill(this.szlakiDataSet.szlaki_biochemiczne);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'sekwencjeDataSet.sekwencje_bialkowe' . Możesz go przenieść lub usunąć.
-            this.sekwencje_bialkoweTableAdapter.Fill(this.sekwencjeDataSet.sekwencje_bialkowe);
+           // this.sekwencje_bialkoweTableAdapter.Fill(this.sekwencjeDataSet.sekwencje_bialkowe);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'funkcjeDataSet.funkcje_bialek' . Możesz go przenieść lub usunąć.
             this.funkcje_bialekTableAdapter1.Fill(this.funkcjeDataSet.funkcje_bialek);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'funkcje_bialek_dataset.funkcje_bialek' . Możesz go przenieść lub usunąć.
@@ -458,7 +460,7 @@ namespace Aplikacja
 
                 sekwencja_textBox.Text = doc.Root.Element("GBSeq").Element("GBSeq_sequence").Value;
                 ncbi_id_textBox.Text = doc.Root.Element("GBSeq").Element("GBSeq_primary-accession").Value;
-                nazwa_textBox.Text = doc.Root.Element("GBSeq").Element("GBSeq_definition").Value;
+                nazwa_textBox.Text = doc.Root.Element("GBSeq").Element("GBSeq_definition").Value.Substring(0,20);
             }
             else
             {
