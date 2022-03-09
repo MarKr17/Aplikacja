@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Aplikacja
 {
@@ -413,5 +416,70 @@ namespace Aplikacja
 
             database_deleteRow("relation_3", dict);
         }
+
+        private void generuj_button1_Click(object sender, EventArgs e)
+        {
+            string query = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/";
+            if (fetch_radioButton.Checked == true)
+            {
+                query += "efetch.fcgi?";
+                query += "db=" + baza_textBox.Text + "&id=" + id_textBox.Text + "&retmode=xml";
+            }
+            else
+            {
+                query += "esearch.fcgi?";
+                query += "db=" + baza_textBox.Text + "&term=" + fraza_textBox.Text;
+
+            }
+
+            zapytanie_textBox.Text = query;
+        }
+
+        private void wykonaj_button_Click(object sender, EventArgs e)
+        {
+            if (zapytanie_textBox.Text == "") return;
+            var url = zapytanie_textBox.Text;
+
+            var request = WebRequest.Create(url);
+            request.Method = "GET";
+
+            var webResponse = request.GetResponse();
+            var webStream = webResponse.GetResponseStream();
+
+            var reader = new StreamReader(webStream);
+            var data = reader.ReadToEnd();
+
+            XDocument doc = XDocument.Parse(data);
+
+            wynik_textBox.Text = doc.ToString();
+
+            if (fetch_radioButton.Checked == true && baza_textBox.Text == "protein")
+            {
+
+                sekwencja_textBox.Text = doc.Root.Element("GBSeq").Element("GBSeq_sequence").Value;
+                ncbi_id_textBox.Text = doc.Root.Element("GBSeq").Element("GBSeq_primary-accession").Value;
+                nazwa_textBox.Text = doc.Root.Element("GBSeq").Element("GBSeq_definition").Value;
+            }
+            else
+            {
+                id_textBox.Text = doc.Element("eSearchResult").Element("IdList").Element("Id").Value;
+            }
+
+        }
+
+        private void dodaj_button_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            if (textBox_nazwa_sekw.Text != null) { dict.Add(key: "nazwa", value: "\'" + nazwa_textBox.Text + "\'"); };
+            if (textBox_ncbi_id.Text != null) { dict.Add(key: "ncbi_id", value: "\'" + ncbi_id_textBox.Text + "\'"); };
+            if (textBox_sekwencja.Text != null) { dict.Add(key: "sekwencja", value: "\'" + sekwencja_textBox.Text + "\'"); };
+
+            database_addRow("sekwencje_bialkowe", dict);
+        }
+        
     }
 }
+
+   
+
