@@ -80,7 +80,7 @@ namespace Aplikacja
             this.sekwencjeDataSet = new Aplikacja.SekwencjeDataSet();
             this.Funkcje = new System.Windows.Forms.TabPage();
             this.funkcje_edytujButton = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.relation4_addButton = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -114,7 +114,7 @@ namespace Aplikacja
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.relation1_addButton = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
@@ -144,7 +144,7 @@ namespace Aplikacja
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.relation3_addButton = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
@@ -667,7 +667,7 @@ namespace Aplikacja
             // 
             this.Funkcje.Controls.Add(this.funkcje_usunButton);
             this.Funkcje.Controls.Add(this.funkcje_edytujButton);
-            this.Funkcje.Controls.Add(this.button4);
+            this.Funkcje.Controls.Add(this.relation4_addButton);
             this.Funkcje.Controls.Add(this.label25);
             this.Funkcje.Controls.Add(this.label24);
             this.Funkcje.Controls.Add(this.label23);
@@ -702,14 +702,15 @@ namespace Aplikacja
             this.funkcje_edytujButton.UseVisualStyleBackColor = true;
             this.funkcje_edytujButton.Click += new System.EventHandler(this.funkcje_edytujButton_Click);
             // 
-            // button4
+            // relation4_addButton
             // 
-            this.button4.Location = new System.Drawing.Point(818, 701);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(149, 40);
-            this.button4.TabIndex = 29;
-            this.button4.Text = "Dodaj zależność";
-            this.button4.UseVisualStyleBackColor = true;
+            this.relation4_addButton.Location = new System.Drawing.Point(818, 701);
+            this.relation4_addButton.Name = "relation4_addButton";
+            this.relation4_addButton.Size = new System.Drawing.Size(149, 40);
+            this.relation4_addButton.TabIndex = 29;
+            this.relation4_addButton.Text = "Dodaj zależność";
+            this.relation4_addButton.UseVisualStyleBackColor = true;
+            this.relation4_addButton.Click += new System.EventHandler(this.relation4_addButton_Click);
             // 
             // label25
             // 
@@ -947,7 +948,7 @@ namespace Aplikacja
             this.Szlaki_Biochem.Controls.Add(this.label28);
             this.Szlaki_Biochem.Controls.Add(this.label27);
             this.Szlaki_Biochem.Controls.Add(this.label26);
-            this.Szlaki_Biochem.Controls.Add(this.button5);
+            this.Szlaki_Biochem.Controls.Add(this.relation1_addButton);
             this.Szlaki_Biochem.Controls.Add(this.textBox4);
             this.Szlaki_Biochem.Controls.Add(this.textBox3);
             this.Szlaki_Biochem.Controls.Add(this.dataGridView4);
@@ -1014,14 +1015,15 @@ namespace Aplikacja
             this.label26.TabIndex = 26;
             this.label26.Text = "Sekwencje powiązane ze szlakami biochemicznymi";
             // 
-            // button5
+            // relation1_addButton
             // 
-            this.button5.Location = new System.Drawing.Point(837, 695);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(170, 54);
-            this.button5.TabIndex = 25;
-            this.button5.Text = "Dodaj zależność";
-            this.button5.UseVisualStyleBackColor = true;
+            this.relation1_addButton.Location = new System.Drawing.Point(837, 695);
+            this.relation1_addButton.Name = "relation1_addButton";
+            this.relation1_addButton.Size = new System.Drawing.Size(170, 54);
+            this.relation1_addButton.TabIndex = 25;
+            this.relation1_addButton.Text = "Dodaj zależność";
+            this.relation1_addButton.UseVisualStyleBackColor = true;
+            this.relation1_addButton.Click += new System.EventHandler(this.relation1_addButton_Click);
             // 
             // textBox4
             // 
@@ -1223,7 +1225,7 @@ namespace Aplikacja
             this.Kompleksy.Controls.Add(this.label30);
             this.Kompleksy.Controls.Add(this.label31);
             this.Kompleksy.Controls.Add(this.label32);
-            this.Kompleksy.Controls.Add(this.button6);
+            this.Kompleksy.Controls.Add(this.relation3_addButton);
             this.Kompleksy.Controls.Add(this.textBox5);
             this.Kompleksy.Controls.Add(this.textBox6);
             this.Kompleksy.Controls.Add(this.dataGridView5);
@@ -1290,14 +1292,15 @@ namespace Aplikacja
             this.label32.TabIndex = 34;
             this.label32.Text = "Sekwencje powiązane z kompleksami";
             // 
-            // button6
+            // relation3_addButton
             // 
-            this.button6.Location = new System.Drawing.Point(929, 698);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(170, 54);
-            this.button6.TabIndex = 33;
-            this.button6.Text = "Dodaj zależność";
-            this.button6.UseVisualStyleBackColor = true;
+            this.relation3_addButton.Location = new System.Drawing.Point(929, 698);
+            this.relation3_addButton.Name = "relation3_addButton";
+            this.relation3_addButton.Size = new System.Drawing.Size(170, 54);
+            this.relation3_addButton.TabIndex = 33;
+            this.relation3_addButton.Text = "Dodaj zależność";
+            this.relation3_addButton.UseVisualStyleBackColor = true;
+            this.relation3_addButton.Click += new System.EventHandler(this.relation3_addButton_Click);
             // 
             // textBox5
             // 
@@ -1763,7 +1766,7 @@ namespace Aplikacja
         private relation4DataSetTableAdapters.relation_4TableAdapter relation_4TableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn sekwencjebialkoweidsekwencjiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn funkcjebialekidfunkcjiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button relation4_addButton;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
@@ -1777,7 +1780,7 @@ namespace Aplikacja
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button relation1_addButton;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.DataGridViewTextBoxColumn sekwencjebialkoweidsekwencjiDataGridViewTextBoxColumn1;
@@ -1785,7 +1788,7 @@ namespace Aplikacja
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button relation3_addButton;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.DataGridView dataGridView5;

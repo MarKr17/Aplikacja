@@ -328,24 +328,48 @@ namespace Aplikacja
         {
             database_deleteRow("funkcje_bialek", "id_funkcji", textBox_id_funk.Text);
 
-            dataGridView_sekwencje.DataSource = sekwencjebialkoweBindingSource;
-            dataGridView_sekwencje.Refresh();
         }
 
         private void szlaki_usunButton_Click(object sender, EventArgs e)
         {
             database_deleteRow("szlaki_biochemiczne", "id_szlaku", textBox_id_szlaku.Text);
-
-            dataGridView_sekwencje.DataSource = sekwencjebialkoweBindingSource;
-            dataGridView_sekwencje.Refresh();
         }
 
         private void kompleksy_usunButton_Click(object sender, EventArgs e)
         {
             database_deleteRow("kompleksy", "id_kompleksu", textBox_id_kom.Text);
 
-            dataGridView_sekwencje.DataSource = sekwencjebialkoweBindingSource;
-            dataGridView_sekwencje.Refresh();
+        }
+
+        private void relation4_addButton_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            if (textBox1.Text != null) { dict.Add(key: "sekwencje_bialkowe_id_sekwencji", value: "\'" + textBox1.Text + "\'"); };
+            if (textBox2.Text != null) { dict.Add(key: "funkcje_bialek_id_funkcji", value: "\'" + textBox2.Text + "\'"); };
+
+            database_addRow("relation_4", dict);
+        }
+
+        private void relation1_addButton_Click(object sender, EventArgs e)
+        {
+
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            if (textBox3.Text != null) { dict.Add(key: "sekwencje_bialkowe_id_sekwencji", value: "\'" + textBox3.Text + "\'"); };
+            if (textBox4.Text != null) { dict.Add(key: "szlaki_biochemiczne_id_szlaku", value: "\'" + textBox4.Text + "\'"); };
+
+            database_addRow("relation_1", dict);
+        }
+
+        private void relation3_addButton_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+
+            if (textBox6.Text != null) { dict.Add(key: "sekwencje_bialkowe_id_sekwencji", value: "\'" + textBox6.Text + "\'"); };
+            if (textBox5.Text != null) { dict.Add(key: "kompleksy_id_kompleksu", value: "\'" + textBox5.Text + "\'"); };
+
+            database_addRow("relation_3", dict);
         }
     }
 }
