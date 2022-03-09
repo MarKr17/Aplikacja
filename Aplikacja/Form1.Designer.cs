@@ -31,6 +31,7 @@ namespace Aplikacja
         {
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Start = new System.Windows.Forms.TabPage();
             this.Sekwencje = new System.Windows.Forms.TabPage();
             this.sekwencje_usunButton = new System.Windows.Forms.Button();
             this.sekwencje_edytujButton = new System.Windows.Forms.Button();
@@ -111,7 +112,6 @@ namespace Aplikacja
             this.funkcjebialekBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.funkcjeDataSet = new Aplikacja.FunkcjeDataSet();
             this.Szlaki_Biochem = new System.Windows.Forms.TabPage();
-            this.relation1_usunButton = new System.Windows.Forms.Button();
             this.szlaki_usunButton = new System.Windows.Forms.Button();
             this.szlaki_edytujButton = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
@@ -143,7 +143,6 @@ namespace Aplikacja
             this.szlakibiochemiczneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.szlakiDataSet = new Aplikacja.SzlakiDataSet();
             this.Kompleksy = new System.Windows.Forms.TabPage();
-            this.relation3_usunButton = new System.Windows.Forms.Button();
             this.kompleksy_usunButton = new System.Windows.Forms.Button();
             this.kompleksy_edytujButton = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
@@ -174,27 +173,6 @@ namespace Aplikacja
             this.zrodloDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kompleksyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kompleksyDataSet = new Aplikacja.KompleksyDataSet();
-            this.Start = new System.Windows.Forms.TabPage();
-            this.dodaj_sekwe_button = new System.Windows.Forms.Button();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.nazwa_textBox = new System.Windows.Forms.TextBox();
-            this.ncbi_id_textBox = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.sekwencja_textBox = new System.Windows.Forms.TextBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.baza_textBox = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.zapytanie_button = new System.Windows.Forms.Button();
-            this.fetch_radioButton = new System.Windows.Forms.RadioButton();
-            this.search_radioButton = new System.Windows.Forms.RadioButton();
-            this.fraza_textBox = new System.Windows.Forms.TextBox();
-            this.id_textBox = new System.Windows.Forms.TextBox();
-            this.wynik_textBox = new System.Windows.Forms.TextBox();
-            this.send_button = new System.Windows.Forms.Button();
-            this.label34 = new System.Windows.Forms.Label();
-            this.zapytanie_textBox = new System.Windows.Forms.TextBox();
             this.funkcje_bialek_dataset = new Aplikacja.Funkcje_bialek_dataset();
             this.funkcjebialekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.funkcje_bialekTableAdapter = new Aplikacja.Funkcje_bialek_datasetTableAdapters.funkcje_bialekTableAdapter();
@@ -209,9 +187,8 @@ namespace Aplikacja
             this.relation_4TableAdapter = new Aplikacja.relation4DataSetTableAdapters.relation_4TableAdapter();
             this.relation_1TableAdapter = new Aplikacja.relation1DataSetTableAdapters.relation_1TableAdapter();
             this.relation_3TableAdapter = new Aplikacja.Database1DataSetTableAdapters.relation_3TableAdapter();
-            this.sekwencjeDataSet1 = new Aplikacja.SekwencjeDataSet1();
-            this.sekwencjebialkoweBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sekwencje_bialkoweTableAdapter1 = new Aplikacja.SekwencjeDataSet1TableAdapters.sekwencje_bialkoweTableAdapter();
+            this.relation1_usunButton = new System.Windows.Forms.Button();
+            this.relation3_usunButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Sekwencje.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -247,25 +224,32 @@ namespace Aplikacja
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_kompleksy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kompleksyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kompleksyDataSet)).BeginInit();
-            this.Start.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.funkcje_bialek_dataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funkcjebialekBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sekwencjeDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sekwencjebialkoweBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Controls.Add(this.Start);
             this.tabControl1.Controls.Add(this.Sekwencje);
             this.tabControl1.Controls.Add(this.Funkcje);
             this.tabControl1.Controls.Add(this.Szlaki_Biochem);
             this.tabControl1.Controls.Add(this.Kompleksy);
-            this.tabControl1.Controls.Add(this.Start);
             this.tabControl1.Location = new System.Drawing.Point(-1, -3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(2195, 1442);
             this.tabControl1.TabIndex = 0;
+            // 
+            // Start
+            // 
+            this.Start.Location = new System.Drawing.Point(4, 29);
+            this.Start.Name = "Start";
+            this.Start.Padding = new System.Windows.Forms.Padding(3);
+            this.Start.Size = new System.Drawing.Size(2187, 1409);
+            this.Start.TabIndex = 0;
+            this.Start.Text = "Start";
+            this.Start.UseVisualStyleBackColor = true;
             // 
             // Sekwencje
             // 
@@ -632,7 +616,7 @@ namespace Aplikacja
             this.ncbiidDataGridViewTextBoxColumn,
             this.uniprotidDataGridViewTextBoxColumn,
             this.sekwencjaDataGridViewTextBoxColumn});
-            this.dataGridView_sekwencje.DataSource = this.sekwencjebialkoweBindingSource1;
+            this.dataGridView_sekwencje.DataSource = this.sekwencjebialkoweBindingSource;
             this.dataGridView_sekwencje.Location = new System.Drawing.Point(25, 65);
             this.dataGridView_sekwencje.Name = "dataGridView_sekwencje";
             this.dataGridView_sekwencje.RowHeadersWidth = 62;
@@ -1020,16 +1004,6 @@ namespace Aplikacja
             this.Szlaki_Biochem.Text = "Szlaki Biochemiczne";
             this.Szlaki_Biochem.UseVisualStyleBackColor = true;
             // 
-            // relation1_usunButton
-            // 
-            this.relation1_usunButton.Location = new System.Drawing.Point(1019, 684);
-            this.relation1_usunButton.Name = "relation1_usunButton";
-            this.relation1_usunButton.Size = new System.Drawing.Size(149, 40);
-            this.relation1_usunButton.TabIndex = 33;
-            this.relation1_usunButton.Text = "Usuń";
-            this.relation1_usunButton.UseVisualStyleBackColor = true;
-            this.relation1_usunButton.Click += new System.EventHandler(this.relation1_usunButton_Click);
-            // 
             // szlaki_usunButton
             // 
             this.szlaki_usunButton.Location = new System.Drawing.Point(322, 804);
@@ -1318,16 +1292,6 @@ namespace Aplikacja
             this.Kompleksy.Text = "Kompleksy";
             this.Kompleksy.UseVisualStyleBackColor = true;
             // 
-            // relation3_usunButton
-            // 
-            this.relation3_usunButton.Location = new System.Drawing.Point(1115, 698);
-            this.relation3_usunButton.Name = "relation3_usunButton";
-            this.relation3_usunButton.Size = new System.Drawing.Size(149, 40);
-            this.relation3_usunButton.TabIndex = 40;
-            this.relation3_usunButton.Text = "Usuń";
-            this.relation3_usunButton.UseVisualStyleBackColor = true;
-            this.relation3_usunButton.Click += new System.EventHandler(this.relation3_usunButton_Click);
-            // 
             // kompleksy_usunButton
             // 
             this.kompleksy_usunButton.Location = new System.Drawing.Point(337, 841);
@@ -1586,209 +1550,6 @@ namespace Aplikacja
             this.kompleksyDataSet.DataSetName = "KompleksyDataSet";
             this.kompleksyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Start
-            // 
-            this.Start.Controls.Add(this.dodaj_sekwe_button);
-            this.Start.Controls.Add(this.label40);
-            this.Start.Controls.Add(this.label39);
-            this.Start.Controls.Add(this.nazwa_textBox);
-            this.Start.Controls.Add(this.ncbi_id_textBox);
-            this.Start.Controls.Add(this.label38);
-            this.Start.Controls.Add(this.sekwencja_textBox);
-            this.Start.Controls.Add(this.label37);
-            this.Start.Controls.Add(this.baza_textBox);
-            this.Start.Controls.Add(this.label36);
-            this.Start.Controls.Add(this.label35);
-            this.Start.Controls.Add(this.zapytanie_button);
-            this.Start.Controls.Add(this.fetch_radioButton);
-            this.Start.Controls.Add(this.search_radioButton);
-            this.Start.Controls.Add(this.fraza_textBox);
-            this.Start.Controls.Add(this.id_textBox);
-            this.Start.Controls.Add(this.wynik_textBox);
-            this.Start.Controls.Add(this.send_button);
-            this.Start.Controls.Add(this.label34);
-            this.Start.Controls.Add(this.zapytanie_textBox);
-            this.Start.Location = new System.Drawing.Point(4, 29);
-            this.Start.Name = "Start";
-            this.Start.Padding = new System.Windows.Forms.Padding(3);
-            this.Start.Size = new System.Drawing.Size(2187, 1409);
-            this.Start.TabIndex = 0;
-            this.Start.Text = "E-utilities";
-            this.Start.UseVisualStyleBackColor = true;
-            // 
-            // dodaj_sekwe_button
-            // 
-            this.dodaj_sekwe_button.Location = new System.Drawing.Point(348, 846);
-            this.dodaj_sekwe_button.Name = "dodaj_sekwe_button";
-            this.dodaj_sekwe_button.Size = new System.Drawing.Size(128, 63);
-            this.dodaj_sekwe_button.TabIndex = 19;
-            this.dodaj_sekwe_button.Text = "Dodaj sekwencję";
-            this.dodaj_sekwe_button.UseVisualStyleBackColor = true;
-            this.dodaj_sekwe_button.Click += new System.EventHandler(this.dodaj_sekwe_button_Click);
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(489, 732);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(55, 20);
-            this.label40.TabIndex = 18;
-            this.label40.Text = "nazwa";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(344, 732);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(68, 20);
-            this.label39.TabIndex = 17;
-            this.label39.Text = "NCBI ID";
-            // 
-            // nazwa_textBox
-            // 
-            this.nazwa_textBox.Location = new System.Drawing.Point(493, 766);
-            this.nazwa_textBox.Name = "nazwa_textBox";
-            this.nazwa_textBox.Size = new System.Drawing.Size(100, 26);
-            this.nazwa_textBox.TabIndex = 16;
-            // 
-            // ncbi_id_textBox
-            // 
-            this.ncbi_id_textBox.Location = new System.Drawing.Point(348, 766);
-            this.ncbi_id_textBox.Name = "ncbi_id_textBox";
-            this.ncbi_id_textBox.Size = new System.Drawing.Size(100, 26);
-            this.ncbi_id_textBox.TabIndex = 15;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(35, 732);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(86, 20);
-            this.label38.TabIndex = 14;
-            this.label38.Text = "Sekwencja";
-            // 
-            // sekwencja_textBox
-            // 
-            this.sekwencja_textBox.Location = new System.Drawing.Point(38, 766);
-            this.sekwencja_textBox.Multiline = true;
-            this.sekwencja_textBox.Name = "sekwencja_textBox";
-            this.sekwencja_textBox.Size = new System.Drawing.Size(284, 143);
-            this.sekwencja_textBox.TabIndex = 13;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(1201, 22);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(86, 20);
-            this.label37.TabIndex = 12;
-            this.label37.Text = "baza NCBI";
-            // 
-            // baza_textBox
-            // 
-            this.baza_textBox.Location = new System.Drawing.Point(1205, 55);
-            this.baza_textBox.Name = "baza_textBox";
-            this.baza_textBox.Size = new System.Drawing.Size(120, 26);
-            this.baza_textBox.TabIndex = 11;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(1049, 22);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(50, 20);
-            this.label36.TabIndex = 10;
-            this.label36.Text = "Fraza";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(899, 22);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(23, 20);
-            this.label35.TabIndex = 9;
-            this.label35.Text = "Id";
-            // 
-            // zapytanie_button
-            // 
-            this.zapytanie_button.Location = new System.Drawing.Point(903, 116);
-            this.zapytanie_button.Name = "zapytanie_button";
-            this.zapytanie_button.Size = new System.Drawing.Size(150, 40);
-            this.zapytanie_button.TabIndex = 8;
-            this.zapytanie_button.Text = "Utwórz zapytanie";
-            this.zapytanie_button.UseVisualStyleBackColor = true;
-            this.zapytanie_button.Click += new System.EventHandler(this.zapytanie_button_Click);
-            // 
-            // fetch_radioButton
-            // 
-            this.fetch_radioButton.AutoSize = true;
-            this.fetch_radioButton.Location = new System.Drawing.Point(1205, 99);
-            this.fetch_radioButton.Name = "fetch_radioButton";
-            this.fetch_radioButton.Size = new System.Drawing.Size(70, 24);
-            this.fetch_radioButton.TabIndex = 7;
-            this.fetch_radioButton.TabStop = true;
-            this.fetch_radioButton.Text = "fetch";
-            this.fetch_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // search_radioButton
-            // 
-            this.search_radioButton.AutoSize = true;
-            this.search_radioButton.Location = new System.Drawing.Point(1205, 132);
-            this.search_radioButton.Name = "search_radioButton";
-            this.search_radioButton.Size = new System.Drawing.Size(82, 24);
-            this.search_radioButton.TabIndex = 6;
-            this.search_radioButton.TabStop = true;
-            this.search_radioButton.Text = "search";
-            this.search_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // fraza_textBox
-            // 
-            this.fraza_textBox.Location = new System.Drawing.Point(1053, 52);
-            this.fraza_textBox.Name = "fraza_textBox";
-            this.fraza_textBox.Size = new System.Drawing.Size(100, 26);
-            this.fraza_textBox.TabIndex = 5;
-            // 
-            // id_textBox
-            // 
-            this.id_textBox.Location = new System.Drawing.Point(903, 51);
-            this.id_textBox.Name = "id_textBox";
-            this.id_textBox.Size = new System.Drawing.Size(100, 26);
-            this.id_textBox.TabIndex = 4;
-            // 
-            // wynik_textBox
-            // 
-            this.wynik_textBox.Location = new System.Drawing.Point(39, 268);
-            this.wynik_textBox.Multiline = true;
-            this.wynik_textBox.Name = "wynik_textBox";
-            this.wynik_textBox.Size = new System.Drawing.Size(765, 399);
-            this.wynik_textBox.TabIndex = 3;
-            // 
-            // send_button
-            // 
-            this.send_button.Location = new System.Drawing.Point(34, 117);
-            this.send_button.Name = "send_button";
-            this.send_button.Size = new System.Drawing.Size(119, 57);
-            this.send_button.TabIndex = 2;
-            this.send_button.Text = "Wyślij";
-            this.send_button.UseVisualStyleBackColor = true;
-            this.send_button.Click += new System.EventHandler(this.send_button_ClickAsync);
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(34, 22);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(79, 20);
-            this.label34.TabIndex = 1;
-            this.label34.Text = "Zapytanie";
-            // 
-            // zapytanie_textBox
-            // 
-            this.zapytanie_textBox.Location = new System.Drawing.Point(32, 51);
-            this.zapytanie_textBox.Name = "zapytanie_textBox";
-            this.zapytanie_textBox.Size = new System.Drawing.Size(678, 26);
-            this.zapytanie_textBox.TabIndex = 0;
-            // 
             // funkcje_bialek_dataset
             // 
             this.funkcje_bialek_dataset.DataSetName = "Funkcje_bialek_dataset";
@@ -1849,19 +1610,25 @@ namespace Aplikacja
             // 
             this.relation_3TableAdapter.ClearBeforeFill = true;
             // 
-            // sekwencjeDataSet1
+            // relation1_usunButton
             // 
-            this.sekwencjeDataSet1.DataSetName = "SekwencjeDataSet1";
-            this.sekwencjeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.relation1_usunButton.Location = new System.Drawing.Point(1019, 684);
+            this.relation1_usunButton.Name = "relation1_usunButton";
+            this.relation1_usunButton.Size = new System.Drawing.Size(149, 40);
+            this.relation1_usunButton.TabIndex = 33;
+            this.relation1_usunButton.Text = "Usuń";
+            this.relation1_usunButton.UseVisualStyleBackColor = true;
+            this.relation1_usunButton.Click += new System.EventHandler(this.relation1_usunButton_Click);
             // 
-            // sekwencjebialkoweBindingSource1
+            // relation3_usunButton
             // 
-            this.sekwencjebialkoweBindingSource1.DataMember = "sekwencje_bialkowe";
-            this.sekwencjebialkoweBindingSource1.DataSource = this.sekwencjeDataSet1;
-            // 
-            // sekwencje_bialkoweTableAdapter1
-            // 
-            this.sekwencje_bialkoweTableAdapter1.ClearBeforeFill = true;
+            this.relation3_usunButton.Location = new System.Drawing.Point(1115, 698);
+            this.relation3_usunButton.Name = "relation3_usunButton";
+            this.relation3_usunButton.Size = new System.Drawing.Size(149, 40);
+            this.relation3_usunButton.TabIndex = 40;
+            this.relation3_usunButton.Text = "Usuń";
+            this.relation3_usunButton.UseVisualStyleBackColor = true;
+            this.relation3_usunButton.Click += new System.EventHandler(this.relation3_usunButton_Click);
             // 
             // Form1
             // 
@@ -1911,12 +1678,8 @@ namespace Aplikacja
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_kompleksy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kompleksyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kompleksyDataSet)).EndInit();
-            this.Start.ResumeLayout(false);
-            this.Start.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.funkcje_bialek_dataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funkcjebialekBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sekwencjeDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sekwencjebialkoweBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1940,7 +1703,9 @@ namespace Aplikacja
         private System.Windows.Forms.DataGridViewTextBoxColumn nazwaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn zrodloDataGridViewTextBoxColumn;
+        private SekwencjeDataSet sekwencjeDataSet;
         private System.Windows.Forms.BindingSource sekwencjebialkoweBindingSource;
+        private SekwencjeDataSetTableAdapters.sekwencje_bialkoweTableAdapter sekwencje_bialkoweTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idsekwencjiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazwaDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ncbiidDataGridViewTextBoxColumn;
@@ -2080,29 +1845,6 @@ namespace Aplikacja
         private System.Windows.Forms.Button relation4_usunButton;
         private System.Windows.Forms.Button relation1_usunButton;
         private System.Windows.Forms.Button relation3_usunButton;
-        private System.Windows.Forms.TextBox wynik_textBox;
-        private System.Windows.Forms.Button send_button;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox zapytanie_textBox;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TextBox baza_textBox;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Button zapytanie_button;
-        private System.Windows.Forms.RadioButton fetch_radioButton;
-        private System.Windows.Forms.RadioButton search_radioButton;
-        private System.Windows.Forms.TextBox fraza_textBox;
-        private System.Windows.Forms.TextBox id_textBox;
-        private System.Windows.Forms.TextBox sekwencja_textBox;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox nazwa_textBox;
-        private System.Windows.Forms.TextBox ncbi_id_textBox;
-        private System.Windows.Forms.Button dodaj_sekwe_button;
-        private SekwencjeDataSet1 sekwencjeDataSet1;
-        private System.Windows.Forms.BindingSource sekwencjebialkoweBindingSource1;
-        private SekwencjeDataSet1TableAdapters.sekwencje_bialkoweTableAdapter sekwencje_bialkoweTableAdapter1;
     }
 }
 
