@@ -78,7 +78,6 @@ namespace Aplikacja
             this.uniprotidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sekwencjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sekwencjebialkoweBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sekwencjeDataSet = new Aplikacja.SekwencjeDataSet();
             this.Funkcje = new System.Windows.Forms.TabPage();
             this.relation4_usunButton = new System.Windows.Forms.Button();
             this.funkcje_usunButton = new System.Windows.Forms.Button();
@@ -177,7 +176,6 @@ namespace Aplikacja
             this.funkcjebialekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.funkcje_bialekTableAdapter = new Aplikacja.Funkcje_bialek_datasetTableAdapters.funkcje_bialekTableAdapter();
             this.funkcje_bialekTableAdapter1 = new Aplikacja.FunkcjeDataSetTableAdapters.funkcje_bialekTableAdapter();
-            this.sekwencje_bialkoweTableAdapter = new Aplikacja.SekwencjeDataSetTableAdapters.sekwencje_bialkoweTableAdapter();
             this.szlaki_biochemiczneTableAdapter = new Aplikacja.SzlakiDataSetTableAdapters.szlaki_biochemiczneTableAdapter();
             this.kompleksyTableAdapter = new Aplikacja.KompleksyDataSetTableAdapters.kompleksyTableAdapter();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -202,7 +200,6 @@ namespace Aplikacja
             ((System.ComponentModel.ISupportInitialize)(this.funkcje_sekwDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_sekwencje)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sekwencjebialkoweBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sekwencjeDataSet)).BeginInit();
             this.Funkcje.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.relation4GridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.relation4BindingSource)).BeginInit();
@@ -669,12 +666,9 @@ namespace Aplikacja
             // sekwencjebialkoweBindingSource
             // 
             this.sekwencjebialkoweBindingSource.DataMember = "sekwencje_bialkowe";
-            this.sekwencjebialkoweBindingSource.DataSource = this.sekwencjeDataSet;
             // 
             // sekwencjeDataSet
             // 
-            this.sekwencjeDataSet.DataSetName = "SekwencjeDataSet";
-            this.sekwencjeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Funkcje
             // 
@@ -1570,7 +1564,6 @@ namespace Aplikacja
             // 
             // sekwencje_bialkoweTableAdapter
             // 
-            this.sekwencje_bialkoweTableAdapter.ClearBeforeFill = true;
             // 
             // szlaki_biochemiczneTableAdapter
             // 
@@ -1653,7 +1646,6 @@ namespace Aplikacja
             ((System.ComponentModel.ISupportInitialize)(this.funkcje_sekwDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_sekwencje)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sekwencjebialkoweBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sekwencjeDataSet)).EndInit();
             this.Funkcje.ResumeLayout(false);
             this.Funkcje.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.relation4GridView)).EndInit();
