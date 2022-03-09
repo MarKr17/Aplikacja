@@ -169,6 +169,22 @@ namespace Aplikacja
             sqlConnection1.Close();
         }
 
+        private void database_deleteRow(string table_name, string id_name, string id)
+        {
+            System.Data.SqlClient.SqlConnection sqlConnection1 =
+                        new System.Data.SqlClient.SqlConnection("Data Source=(LocalDB)\\" +
+                        "MSSQLLocalDB;AttachDbFilename=C:\\Users\\Marysia\\source\\repos\\Aplikacja\\Aplikacja\\Database1.mdf;Integrated Security=True");
+
+            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"DELETE FROM {table_name} WHERE {id_name} = {id};";
+            cmd.Connection = sqlConnection1;
+
+            sqlConnection1.Open();
+            cmd.ExecuteNonQuery();
+            sqlConnection1.Close();
+        }
+
         private void zapisz_sekwencje_button_Click(object sender, EventArgs e)
         {
             //string id_sekw = textBox_id_sekw.Text;
@@ -297,6 +313,39 @@ namespace Aplikacja
 
             dataGridView_kompleksy.DataSource = kompleksyBindingSource;
             dataGridView_kompleksy.Refresh();
+        }
+
+        private void sekwencje_usunButton_Click(object sender, EventArgs e)
+        {
+            database_deleteRow("sekwencje_bialkowe", "id_sekwencji", textBox_id_sekw.Text);
+
+
+            dataGridView_sekwencje.DataSource = sekwencjebialkoweBindingSource;
+            dataGridView_sekwencje.Refresh();
+        }
+
+        private void funkcje_usunButton_Click(object sender, EventArgs e)
+        {
+            database_deleteRow("funkcje_bialek", "id_funkcji", textBox_id_funk.Text);
+
+            dataGridView_sekwencje.DataSource = sekwencjebialkoweBindingSource;
+            dataGridView_sekwencje.Refresh();
+        }
+
+        private void szlaki_usunButton_Click(object sender, EventArgs e)
+        {
+            database_deleteRow("szlaki_biochemiczne", "id_szlaku", textBox_id_szlaku.Text);
+
+            dataGridView_sekwencje.DataSource = sekwencjebialkoweBindingSource;
+            dataGridView_sekwencje.Refresh();
+        }
+
+        private void kompleksy_usunButton_Click(object sender, EventArgs e)
+        {
+            database_deleteRow("kompleksy", "id_kompleksu", textBox_id_kom.Text);
+
+            dataGridView_sekwencje.DataSource = sekwencjebialkoweBindingSource;
+            dataGridView_sekwencje.Refresh();
         }
     }
 }
